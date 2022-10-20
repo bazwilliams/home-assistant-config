@@ -1,0 +1,83 @@
+blueprint:
+  name: "Set input text scenes based on the house mode"
+  description: Set input text scenes based on the house mode
+  domain: automation
+  input:
+    target_house_mode:
+      name: House Mode
+      selector:
+        text:
+    front_garden_scene:
+      name: Desired scene for Front Garden
+      selector:
+        text:
+    back_garden_scene:
+      name: Desired scene for Back Garden
+      selector:
+        text:
+    staircase_scene:
+      name: Desired scene for Staircase
+      selector:
+        text:
+    downstairs_hallway_scene:
+      name: Desired scene for Downstairs Hallway
+      selector:
+        text:
+    upstairs_hallway_scene:
+      name: Desired scene for Upstairs Hallway
+      selector:
+        text:
+    living_room_scene:
+      name: Desired scene for Living Room
+      selector:
+        text:
+    downstairs_toilet_scene:
+      name: Desired scene for Downstairs Toilet
+      selector:
+        text:
+    kitchen_scene:
+      name: Desired scene for Kitchen
+      selector:
+        text:
+
+mode: restart
+max_exceeded: silent
+
+trigger:
+  - platform: state
+    entity_id: sensor.house_mode
+    to: !input target_house_mode
+
+action:
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.front_garden_scene
+        value: !input front_garden_scene
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.back_garden_scene
+        value: !input back_garden_scene
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: !input staircase_scene
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_hallway_scene
+        value: !input downstairs_hallway_scene
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: !input upstairs_hallway_scene
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.living_room_scene
+        value: !input living_room_scene
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: !input downstairs_toilet_scene
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: !input kitchen_scene

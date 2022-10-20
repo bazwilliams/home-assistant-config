@@ -1,0 +1,51 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+homeassistant:
+  packages: !include_dir_named packages
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+zha:
+  zigpy_config:
+    ota:
+      ikea_provider: true
+
+discovery:
+
+media_player:
+  - platform: openhome
+
+input_text:
+  snug_volume_last_command:
+    name: Snug Volume Last Command
+  back_garden_scene:
+    name: Back Garden Scene
+    initial: back_garden_off
+  downstairs_hallway_scene:
+    name: Downstairs Hallway Scene
+    initial: downstairs_hallway_off
+  downstairs_toilet_scene:
+    name: Downstairs Toilet Scene
+    initial: downstairs_toilet_bright
+  front_garden_scene:
+    name: Front Garden Scene
+    initial: front_garden_off
+  kitchen_scene:
+    name: Kitchen Scene
+    initial: kitchen_morning
+  living_room_scene:
+    name: Living Room Scene
+    initial: living_room_off
+  staircase_scene:
+    name: Staircase Scene
+    initial: stairs_off
+  upstairs_hallway_scene:
+    name: Upstairs Hallway Scene
+    initial: upstairs_hallway_night

@@ -1,0 +1,770 @@
+sensor:
+  - platform: template
+    sensors:
+      house_mode:
+        unique_id: house_mode
+        friendly_name: 'House Mode'
+        value_template: >-
+          {% if now().hour | int >= 22 %}
+          {% set time_slot = "early_night" %}
+          {% elif now().hour | int >= 20 %}
+          {% set time_slot = "late_evening" %}
+          {% elif now().hour | int >= 19 %}
+          {% set time_slot = "evening" %}
+          {% elif now().hour | int >= 8 %}
+          {% set time_slot = "daytime" %}
+          {% elif now().hour | int >= 6 and now().minute | int >=30 %}
+          {% set time_slot = "morning" %}
+          {% elif now().hour | int >= 1 and now().minute | int >=30 %}
+          {% set time_slot = "night" %}
+          {% elif now().hour | int >= 0 %}
+          {% set time_slot = "late_night" %}
+          {% endif %}
+          {% if states("sensor.outside_illuminance") | float < 50 %}
+          {% set light_slot = "dark" %}
+          {% elif states("sensor.outside_illuminance") | float  < 600 %}
+          {% set light_slot = "dim" %}
+          {% elif states("sensor.outside_illuminance") | float  < 3000 %}
+          {% set light_slot = "bright" %}
+          {% else %}
+          {% set light_slot = "very_bright" %}
+          {% endif %}
+          {% set presence = "home" %}
+          {{ time_slot }}_{{ light_slot }}_{{ presence }}
+
+automation:
+- alias: Update house mode
+  trigger:
+    - platform: time_pattern
+      minutes: /2
+  action:
+    - service: homeassistant.update_entity
+      entity_id: sensor.house_mode
+- alias: Set scenes when morning_dark_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_morning
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_morning
+      living_room_scene: living_room_morning
+      staircase_scene: stairs_morning
+      target_house_mode: morning_dark_home
+      upstairs_hallway_scene: upstairs_hallway_morning
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when morning_dim_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_morning
+      downstairs_toilet_scene: downstairs_toilet_mid
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_morning
+      living_room_scene: living_room_morning
+      staircase_scene: stairs_morning
+      target_house_mode: morning_dim_home
+      upstairs_hallway_scene: upstairs_hallway_morning
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when morning_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_daytime_presence
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_morning
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: morning_bright_home
+      upstairs_hallway_scene: upstairs_hallway_morning
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when morning_very_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_morning
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: morning_very_bright_home
+      upstairs_hallway_scene: upstairs_hallway_morning
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when daytime_dark_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_daytime
+      living_room_scene: living_room_pink_blue
+      staircase_scene: stairs_colourful
+      target_house_mode: daytime_dark_home
+      upstairs_hallway_scene: upstairs_hallway_evening
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when daytime_dim_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_dull_outside
+      downstairs_toilet_scene: downstairs_toilet_mid
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_daytime
+      living_room_scene: living_room_dull_outside
+      staircase_scene: stairs_colourful
+      target_house_mode: daytime_dim_home
+      upstairs_hallway_scene: upstairs_hallway_daytime
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when daytime_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_daytime_presence
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_daytime
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: daytime_bright_home
+      upstairs_hallway_scene: upstairs_hallway_daytime
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when daytime_very_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_daytime
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: daytime_very_bright_home
+      upstairs_hallway_scene: upstairs_hallway_daytime
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when evening_dark_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_evening
+      living_room_scene: living_room_pink_blue
+      staircase_scene: stairs_colourful
+      target_house_mode: evening_dark_home
+      upstairs_hallway_scene: upstairs_hallway_evening
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when evening_dim_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_toilet_scene: downstairs_toilet_mid
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_evening
+      living_room_scene: living_room_dull_outside
+      staircase_scene: stairs_colourful
+      target_house_mode: evening_dim_home
+      upstairs_hallway_scene: upstairs_hallway_evening
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when evening_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_evening
+      living_room_scene: living_room_off
+      staircase_scene: stairs_decorative_pastel
+      target_house_mode: evening_bright_home
+      upstairs_hallway_scene: upstairs_hallway_daytime
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when evening_very_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_evening
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: evening_very_bright_home
+      upstairs_hallway_scene: upstairs_hallway_evening
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_evening_dark_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_evening
+      living_room_scene: living_room_pink_blue
+      staircase_scene: stairs_colourful_dimmed
+      target_house_mode: late_evening_dark_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_evening_dim_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_toilet_scene: downstairs_toilet_mid
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_evening
+      living_room_scene: living_room_dull_outside
+      staircase_scene: stairs_colourful_dimmed
+      target_house_mode: late_evening_dim_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_evening_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_daytime_presence
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_evening
+      living_room_scene: living_room_off
+      staircase_scene: stairs_decorative_pastel
+      target_house_mode: late_evening_bright_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_evening_very_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_evening
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: late_evening_very_bright_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when early_night_dark_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_late_evening
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_early_night
+      living_room_scene: living_room_pink_orange
+      staircase_scene: stairs_colourful_dimmed
+      target_house_mode: early_night_dark_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when early_night_dim_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_late_evening
+      downstairs_toilet_scene: downstairs_toilet_mid
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_early_night
+      living_room_scene: living_room_dull_outside
+      staircase_scene: stairs_colourful_dimmed
+      target_house_mode: early_night_dim_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when early_night_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_late_evening
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_early_night
+      living_room_scene: living_room_off
+      staircase_scene: stairs_colourful_dimmed
+      target_house_mode: early_night_bright_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when early_night_very_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_early_night
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: early_night_very_bright_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_night_dark_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_early_night
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_late_night
+      living_room_scene: living_room_pink_orange
+      staircase_scene: stairs_late_night
+      target_house_mode: late_night_dark_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_night_dim_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_early_night
+      downstairs_toilet_scene: downstairs_toilet_mid
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_late_night
+      living_room_scene: living_room_dull_outside
+      staircase_scene: stairs_late_night
+      target_house_mode: late_night_dim_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_night_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_early_night
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_late_night
+      living_room_scene: living_room_off
+      staircase_scene: stairs_decorative_pastel
+      target_house_mode: late_night_bright_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_night_very_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_late_night
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: late_night_very_bright_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when night_dark_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_night
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_night
+      living_room_scene: living_room_off
+      staircase_scene: stairs_night
+      target_house_mode: night_dark_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when night_dim_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_night
+      downstairs_toilet_scene: downstairs_toilet_mid
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_night
+      living_room_scene: living_room_off
+      staircase_scene: stairs_night
+      target_house_mode: night_dim_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when night_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_night
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_night
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: night_bright_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when night_very_bright_home
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_night
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_night
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: night_very_bright_home
+      upstairs_hallway_scene: upstairs_hallway_night
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when morning_dark_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_morning_away
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_morning
+      staircase_scene: stairs_off
+      target_house_mode: morning_dark_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when morning_dim_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_morning_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_morning
+      staircase_scene: stairs_off
+      target_house_mode: morning_dim_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when morning_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: morning_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when morning_very_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: morning_very_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when daytime_dark_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening_away
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_pink_blue_away
+      staircase_scene: stairs_off
+      target_house_mode: daytime_dark_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when daytime_dim_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: daytime_dim_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when daytime_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: daytime_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when daytime_very_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: daytime_very_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when evening_dark_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening_away
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_pink_orange_away
+      staircase_scene: stairs_off
+      target_house_mode: evening_dark_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when evening_dim_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: evening_dim_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when evening_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: evening_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when evening_very_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: evening_very_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_evening_dark_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_colourful_evening_away
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_pink_orange_away
+      staircase_scene: stairs_off
+      target_house_mode: late_evening_dark_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_evening_dim_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: late_evening_dim_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_evening_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: late_evening_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_evening_very_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: late_evening_very_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when early_night_dark_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_dimmed
+      downstairs_hallway_scene: downstairs_hallway_late_evening_away
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_dimmed
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_pink_orange_away
+      staircase_scene: stairs_off
+      target_house_mode: early_night_dark_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when early_night_dim_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_late_evening_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: early_night_dim_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when early_night_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: early_night_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when early_night_very_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: early_night_very_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_night_dark_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_pink_orange_away
+      staircase_scene: stairs_off
+      target_house_mode: late_night_dark_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_night_dim_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: late_night_dim_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_night_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: late_night_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when late_night_very_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: late_night_very_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when night_dark_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_mood
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: night_dark_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when night_dim_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: night_dim_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when night_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: night_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml
+- alias: Set scenes when night_very_bright_away
+  use_blueprint:
+    input:
+      back_garden_scene: back_garden_off
+      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_toilet_scene: downstairs_toilet_bright
+      front_garden_scene: front_garden_off
+      kitchen_scene: kitchen_alarm_active
+      living_room_scene: living_room_off
+      staircase_scene: stairs_off
+      target_house_mode: night_very_bright_away
+      upstairs_hallway_scene: upstairs_hallway_off
+    path: bazwilliams/scene_setter.yaml

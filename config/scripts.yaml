@@ -1,0 +1,299 @@
+vacuum_hallway:
+  alias: Clean the hall
+  mode: single
+  sequence:
+    - service: neato.custom_cleaning
+      data:
+        entity_id: vacuum.neato
+        mode: 2
+        navigation: 3
+        zone: Hallway
+vacuum_kitchen:
+  alias: Clean the kitchen
+  mode: single
+  sequence:
+    - service: neato.custom_cleaning
+      data:
+        entity_id: vacuum.neato
+        mode: 2
+        navigation: 3
+        zone: Kitchen
+vacuum_living_room:
+  alias: Clean the living room
+  mode: single
+  sequence:
+    - service: neato.custom_cleaning
+      data:
+        entity_id: vacuum.neato
+        mode: 2
+        navigation: 3
+        zone: Living Room
+
+vacuum_toilet:
+  alias: Clean the toilet
+  mode: single
+  sequence:
+    - service: neato.custom_cleaning
+      data:
+        entity_id: vacuum.neato
+        mode: 2
+        navigation: 3
+        zone: Toilet
+
+vacuum_stop:
+  alias: Stop cleaning
+  mode: single
+  sequence:
+    - service: vacuum.return_to_base
+      data:
+        entity_id: vacuum.neato
+
+projector_on:
+  alias: Projector On
+  mode: restart
+  sequence:
+    # - service: switch.turn_on
+    #   target:
+    #     entity_id: switch.benq_projector
+    - service: cover.close_cover
+      target:
+        entity_id: cover.snug_blind_cover
+    - service: script.turn_on
+      target:
+        entity_id: script.snug_surround
+
+projector_off:
+  alias: Projector Off
+  mode: restart
+  sequence:
+    # - service: switch.turn_off
+    #   target:
+    #     entity_id: switch.benq_projector
+    # - delay:
+    #     milliseconds: 30
+    # - service: switch.turn_off
+    #   target:
+    #     entity_id: switch.benq_projector
+    - service: cover.open_cover
+      target:
+        entity_id: cover.snug_blind_cover
+    # - service: media_player.turn_off
+    #   target:
+    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
+
+snug_surround:
+  alias: Surround Sound
+  mode: restart
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id: switch.lp12
+    - service: switch.turn_on
+      target:
+        entity_id: switch.snug_hifi
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_movie
+    # - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
+    # - service: media_player.select_source
+    #   data:
+    #     source: Arcam
+    #   target:
+    #     entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
+    # - service: media_player.turn_on
+    #   target:
+    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
+    # - delay:
+    #     milliseconds: 30
+    # - service: media_player.select_source
+    #   data:
+    #     source: BD
+    #   target:
+    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
+    # - service: media_player.turn_on
+    #   target:
+    #     entity_id: media_player.snug
+    # - service: media_player.select_source
+    #   data:
+    #     source: TV
+    #   target:
+    #     entity_id: media_player.snug
+
+snug_music:
+  alias: HiFi
+  mode: restart
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id: switch.lp12
+    - service: switch.turn_on
+      target:
+        entity_id: switch.snug_hifi
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_music
+    # - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
+    # - service: media_player.select_source
+    #   data:
+    #     source: Roon
+    #   target:
+    #     entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
+    # - service: media_player.turn_on
+    #   target:
+    #     entity_id: media_player.samsung_the_frame_43
+    # - service: media_player.turn_on
+    #   target:
+    #     entity_id: media_player.snug
+    # - service: media_player.select_source
+    #   data:
+    #     source: TV:Remote
+    #   target:
+    #     entity_id: media_player.snug
+    # - delay:
+    #     seconds: 5
+    # - service: media_player.turn_off
+    #   target:
+    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
+
+snug_lp12:
+  alias: LP12
+  mode: restart
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id: switch.lp12
+    - service: switch.turn_on
+      target:
+        entity_id: switch.snug_hifi
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_lp12
+    # - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
+    # - service: media_player.select_source
+    #   data:
+    #     source: LP12
+    #   target:
+    #     entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
+    # - service: media_player.turn_off
+    #   target:
+    #     entity_id: media_player.samsung_the_frame_43
+    # - service: media_player.turn_off
+    #   target:
+    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
+
+snug_off:
+  alias: Snug Off
+  mode: restart
+  sequence:
+    - service: script.turn_on
+      target:
+        entity_id: script.projector_off
+    - service: switch.turn_off
+      data:
+        entity_id: switch.lp12
+    - service: switch.turn_off
+      data:
+        entity_id: switch.snug_hifi
+    # - service: media_player.turn_off
+    #   target:
+    #     entity_id: media_player.snug
+    # - delay:
+    #     seconds: 5
+    # - service: media_player.turn_off
+    #   target:
+    #     entity_id: media_player.samsung_the_frame_43
+
+# gone_out:
+#   alias: Gone Out
+#   mode: restart
+#   sequence:
+#     - service: light.turn_off
+#       target:
+#         entity_id: 
+#         - light.bedroom
+#         - light.ethan_s_room
+#         - light.marcus_room
+#         - light.guest_big_light
+#         - light.garden_studio
+#     - service: media_player.turn_off
+#       target:
+#         entity_id:
+#         - media_player.living_room_tv
+#         - media_player.openhome_uuid_4c494e4e_0026_0f21_bf92_01303737013f
+#         - media_player.openhome_uuid_4c494e4e_0026_0f21_f15c_01373197013f
+#         - media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
+#         - media_player.philips_tam8905
+#         - media_player.43pus7555_12
+#         - media_player.samsung_the_frame_43
+#         - media_player.snug
+#     - service: switch.turn_off
+#       target:
+#         entity_id:
+#         - switch.kiko_socket_switch_2
+#         - switch.sneaky_socket_switch
+#     - service: script.turn_on
+#       target:
+#         entity_id: script.snug_off
+
+# gone_to_bed:
+#   alias: Gone To Bed
+#   mode: restart
+#   sequence:
+#     - service: light.turn_off
+#       target:
+#         entity_id: 
+#         - light.living_room
+#     - service: switch.turn_off
+#       target:
+#         entity_id:
+#         - switch.living_room_hifi_power
+
+living_room_music_on:
+  alias: Living Room Music On
+  mode: restart
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id: switch.sneaky_socket_switch
+    # - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f21_f15c_01373197013f') != 'unavailable' }}"
+    # - service: media_player.select_source
+    #   data:
+    #     source: Roon
+    #   target:
+    #     entity_id: media_player.openhome_uuid_4c494e4e_0026_0f21_f15c_01373197013f
+    # - service: media_player.media_play
+    #   data:
+    #     entity_id: media_player.living_room
+
+living_room_music_off:
+  alias: Living Room Music Off
+  mode: restart
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id: switch.sneaky_socket_switch
+
+kitchen_music_on:
+  alias: Kitchen Music On
+  mode: restart
+  sequence:
+    - service: switch.turn_on
+      target:
+        entity_id: switch.kiko_socket_switch_2
+    - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f21_bf92_01303737013f') != 'unavailable' }}"
+    - service: media_player.select_source
+      data:
+        source: Roon
+      target:
+        entity_id: media_player.openhome_uuid_4c494e4e_0026_0f21_bf92_01303737013f
+
+kitchen_music_off:
+  alias: Kitchen Music Off
+  mode: restart
+  sequence:
+    - service: switch.turn_off
+      target:
+        entity_id: switch.kiko_socket_switch_2
