@@ -314,7 +314,9 @@
 - name: Kitchen Off
   id: a215e4f4-4975-441a-ab2d-307e9f9a3123
   entities:
-    light.dresden_elektronik_conbee_ii_kitchen_worktop_lights_zha_group_0x0002: off
+    light.worktop_left_light_4: off
+    light.worktop_right_light_2: off
+    light.worktop_tumble_dryer_light_3: off
     light.dining_table_light: off
     light.kitchen_main: off
     light.kitchen_under_cupboards: off
@@ -322,7 +324,13 @@
 - name: Kitchen Night
   id: 5eb34708-1fff-417f-9f61-8dfc512e1563
   entities:
-    light.dresden_elektronik_conbee_ii_kitchen_worktop_lights_zha_group_0x0002:
+    light.worktop_left_light_4:
+      state: "on"
+      brightness: 20
+    light.worktop_right_light_2:
+      state: "on"
+      brightness: 20
+    light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 20
     light.dining_table_light: off
@@ -338,7 +346,13 @@
 - name: Kitchen Late Night
   id: ace3798c-0e4e-4283-965c-4da01226d0e5
   entities:
-    light.dresden_elektronik_conbee_ii_kitchen_worktop_lights_zha_group_0x0002:
+    light.worktop_left_light_4:
+      state: "on"
+      brightness: 50
+    light.worktop_right_light_2:
+      state: "on"
+      brightness: 50
+    light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 50
     light.dining_table_light: off
@@ -357,7 +371,13 @@
 - name: Kitchen Early Night
   id: 524930f7-ba59-4312-8113-82586e5ae1b5
   entities:
-    light.dresden_elektronik_conbee_ii_kitchen_worktop_lights_zha_group_0x0002:
+    light.worktop_left_light_4:
+      state: "on"
+      brightness: 100
+    light.worktop_right_light_2:
+      state: "on"
+      brightness: 100
+    light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 100
     light.dining_table:
@@ -378,7 +398,13 @@
 - name: Kitchen Evening
   id: 5888adc1-53ae-4c2f-8309-0cb5bf45ad91
   entities:
-    light.dresden_elektronik_conbee_ii_kitchen_worktop_lights_zha_group_0x0002:
+    light.worktop_left_light_4:
+      state: "on"
+      brightness: 150
+    light.worktop_right_light_2:
+      state: "on"
+      brightness: 150
+    light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 150
     light.dining_table:
@@ -399,7 +425,13 @@
 - name: Kitchen Daytime
   id: 8a025d5c-28df-4e4a-9e8c-89681fedf54d
   entities:
-    light.dresden_elektronik_conbee_ii_kitchen_worktop_lights_zha_group_0x0002:
+    light.worktop_left_light_4:
+      state: "on"
+      brightness: 255
+    light.worktop_right_light_2:
+      state: "on"
+      brightness: 255
+    light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 255
     light.dining_table:
@@ -420,7 +452,13 @@
 - name: Kitchen Morning
   id: dd9cf914-1493-4f4b-a660-dfd6c369d5ab
   entities:
-    light.dresden_elektronik_conbee_ii_kitchen_worktop_lights_zha_group_0x0002:
+    light.worktop_left_light_4:
+      state: "on"
+      brightness: 255
+    light.worktop_right_light_2:
+      state: "on"
+      brightness: 255
+    light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 255
     light.dining_table:
@@ -441,7 +479,13 @@
 - name: Kitchen Bright
   id: 438ce466-eb0a-424d-99ed-cd2712ce52d9
   entities:
-    light.dresden_elektronik_conbee_ii_kitchen_worktop_lights_zha_group_0x0002:
+    light.worktop_left_light_4:
+      state: "on"
+      brightness: 255
+    light.worktop_right_light_2:
+      state: "on"
+      brightness: 255
+    light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 255
     light.dining_table:

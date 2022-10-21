@@ -22,7 +22,7 @@ automation:
       from: "off"
       to: "on"
     - platform: numeric_state
-      entity_id: sensor.hue_motion_sensor_1_motion
+      entity_id: sensor.hue_motion_sensor_1_illuminance
       below: 100
   action:
     - service: scene.turn_on
