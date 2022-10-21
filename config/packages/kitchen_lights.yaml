@@ -1,0 +1,76 @@
+automation:
+- alias: Kitchen Lights Motion While not BFL
+  mode: single
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.hue_motion_sensor_1_illuminance
+      below: 100
+    - condition: state
+      entity_id: binary_sensor.hue_motion_sensor_1_motion
+      state: "on"
+    - condition: state
+      entity_id: light.kitchen_lights
+      state:  "off"
+    - condition: state
+      entity_id: input_boolean.kitchen_bfl
+      state:  "off"
+  trigger:
+    - platform: state
+      entity_id: sensor.house_mode
+    - platform: state
+      entity_id: binary_sensor.hue_motion_sensor_1_motion
+      from: "off"
+      to: "on"
+    - platform: numeric_state
+      entity_id: sensor.hue_motion_sensor_1_motion
+      below: 100
+  action:
+    - service: scene.turn_on
+      data_template:
+        transition: 0.5
+        entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
+
+- alias: Kitchen Lights No Motion While Not BFL
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.hue_motion_sensor_1_motion
+      to: "off"
+      for:
+        minutes: 10
+    - platform: numeric_state
+      entity_id: sensor.hue_motion_sensor_1_illuminance
+      above: 200
+  condition:
+  - condition: state
+    entity_id: input_boolean.kitchen_bfl
+    state:  "off"
+  action:
+    - service: scene.turn_on
+      data:
+        transition: 5
+        entity_id: scene.kitchen_off
+
+- alias: Kitchen Bright
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: input_boolean.kitchen_bfl
+      to: "on"
+  action:
+  - service: scene.turn_on
+    data_template:
+      transition: 0
+      entity_id: scene.kitchen_bright
+
+- alias: Kitchen BFL Off
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: input_boolean.kitchen_bfl
+    to: "off"
+  action:
+  - service: scene.turn_on
+    data_template:
+      transition: 5
+      entity_id: "scene.{{ states('input_text.kitchen_scene') }}"

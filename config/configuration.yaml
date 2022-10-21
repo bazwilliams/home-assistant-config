@@ -25,6 +25,12 @@ media_player:
 input_text:
   snug_volume_last_command:
     name: Snug Volume Last Command
+  living_room_music_shortcut_last_command:
+    name: Living Room Music Shortcut Last Command
+  kitchen_music_shortcut_last_command:
+    name: Kitchen Music Shortcut Last Command
+  snug_music_shortcut_last_command:
+    name: Snug Music Shortcut Last Command
   back_garden_scene:
     name: Back Garden Scene
     initial: back_garden_off
@@ -49,3 +55,20 @@ input_text:
   upstairs_hallway_scene:
     name: Upstairs Hallway Scene
     initial: upstairs_hallway_night
+
+input_boolean:
+  kitchen_bfl:
+    name: Kitchen should be bright
+    initial: off
+
+light:
+  - platform: group
+    name: Kitchen Lights
+    entities:
+      - light.worktop_left_light_4
+      - light.worktop_right_light_2
+      - light.worktop_tumble_dryer_light_3
+      - light.kitchen_main
+      - light.kitchen_under_cupboards
+      - light.kitchen_under_tall_cupboards
+      - light.back_garden_light
