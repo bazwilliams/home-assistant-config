@@ -380,7 +380,7 @@
     light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 100
-    light.dining_table:
+    light.dining_table_light:
       state: "on"
       brightness: 76
     light.kitchen_main:
@@ -407,7 +407,7 @@
     light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 150
-    light.dining_table:
+    light.dining_table_light:
       state: "on"
       brightness: 120
     light.kitchen_main:
@@ -434,9 +434,9 @@
     light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 255
-    light.dining_table:
+    light.dining_table_light:
       state: "on"
-      brightness: 254
+      brightness: 255
     light.kitchen_main:
       state: "on"
       xy_color: [ 0.158, 0.094 ]
@@ -461,9 +461,9 @@
     light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 255
-    light.dining_table:
+    light.dining_table_light:
       state: "on"
-      brightness: 254
+      brightness: 255
     light.kitchen_main:
       state: "on"
       xy_color: [ 0.526, 0.411 ]
@@ -488,7 +488,7 @@
     light.worktop_tumble_dryer_light_3:
       state: "on"
       brightness: 255
-    light.dining_table:
+    light.dining_table_light:
       state: "on"
       brightness: 255
     light.kitchen_main:
