@@ -24,13 +24,17 @@ media_player:
 
 input_text:
   snug_volume_last_command:
-    name: Snug Volume Last Command
+    name: ZHA Last Command - Snug Volume
   living_room_music_shortcut_last_command:
-    name: Living Room Music Shortcut Last Command
+    name: ZHA Last Command - Living Room Music Shortcut
+  living_room_dimmer_last_command:
+    name: ZHA Last Command - Living Room Dimmer
+  lsnug_dimmer_last_command:
+    name: ZHA Last Command - Snug Dimmer
   kitchen_music_shortcut_last_command:
-    name: Kitchen Music Shortcut Last Command
+    name: ZHA Last Command - Kitchen Music Shortcut
   snug_music_shortcut_last_command:
-    name: Snug Music Shortcut Last Command
+    name: ZHA Last Command - Snug Music Shortcut
   back_garden_scene:
     name: Back Garden Scene
     initial: back_garden_off
