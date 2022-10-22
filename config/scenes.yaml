@@ -310,7 +310,6 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
-
 - name: Kitchen Off
   id: a215e4f4-4975-441a-ab2d-307e9f9a3123
   entities:
@@ -503,3 +502,270 @@
       state: "on"
       brightness: 255
       color_temp: 156
+- name: Living Room Off
+  id: ce0a10dd-6477-4fea-882e-755b0938d799
+  entities:
+    light.hue_color_candle_3:
+      state: "off"
+    light.hue_color_candle_5:
+      state: "off"
+    light.hue_color_candle_6:
+      state: "off"
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"
+- name: Living Room Off TV
+  id: f8df4c88-5fcf-4dbd-aea1-ca18620d55c8
+  entities:
+    light.hue_color_candle_3:
+      state: "off"
+    light.hue_color_candle_5:
+      state: "off"
+    light.hue_color_candle_6:
+      state: "off"
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"
+- name: Living Room Bright
+  id: 79aa1c13-07fc-4d9c-9174-efa057744552
+  entities:
+    light.hue_color_candle_3:
+      state: "on"
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_5:
+      state: "on"
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_6:
+      state: "on"
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_7:
+      state: "on"
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_8:
+      state: "on"
+      brightness: 255
+      color_temp: 156
+- name: Living Room Morning TV
+  id: 968cedb4-5b96-440a-a634-65996a9795d4
+  entities:
+    light.hue_color_candle_3:
+      state: "off"
+    light.hue_color_candle_5:
+      state: "off"
+    light.hue_color_candle_6:
+      state: "off"
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"
+- name: Living Room Morning
+  id: cd90a012-16e8-4be2-858c-f767f45c91c5
+  entities:
+    light.hue_color_candle_3:
+      state: "off"
+    light.hue_color_candle_5:
+      state: "off"
+    light.hue_color_candle_6:
+      state: "off"
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"
+- name: Living Room Dull Outside TV
+  id: 399b1de5-87fa-496a-89b8-84454ec0c91d
+  entities:
+    light.hue_color_candle_3:
+      state: "off"
+    light.hue_color_candle_5:
+      state: "off"
+    light.hue_color_candle_6:
+      state: "off"
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"
+- name: Living Room Dull Outside
+  id: f9edc4da-cd18-42e0-8e61-0ae8104ca658
+  entities:
+    light.hue_color_candle_3:
+      state: "on"
+      brightness: 25
+      color_temp: 246
+    light.hue_color_candle_5:
+      state: "on"
+      brightness: 28
+      xy_color: [ 0.491, 0.415 ]
+    light.hue_color_candle_6:
+      state: "on"
+      brightness: 25
+      color_temp: 156
+    light.hue_color_candle_7:
+      state: "on"
+      brightness: 25
+      xy_color: [  0.259, 0.186 ]
+    light.hue_color_candle_8:
+      state: "on"
+      brightness: 30
+      xy_color: [  0.267, 0.218 ]
+- name: Living Room Pink Blue Away TV
+  id: 6dc0f73f-5647-4366-b196-0ea1a59e5f4f
+  entities:
+    light.hue_color_candle_3:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.158, 0.182 ]
+    light.hue_color_candle_5:
+      state: "off"
+    light.hue_color_candle_6:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.181, 0.434 ]
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"
+- name: Living Room Pink Blue Away
+  id: e77de594-f114-45a3-9f10-bfaecfb64630
+  entities:
+    light.hue_color_candle_3:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.158, 0.182 ]
+    light.hue_color_candle_5:
+      state: "off"
+    light.hue_color_candle_6:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.181, 0.434 ]
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"
+- name: Living Room Pink Blue TV
+  id: c36ec040-647d-4d8b-b4df-3deb9423a732
+  entities:
+    light.hue_color_candle_3:
+      state: "on"
+      brightness: 20
+      xy_color: [ 0.158, 0.182 ]
+    light.hue_color_candle_5:
+      state: "on"
+      brightness: 20
+      xy_color: [ 0.278, 0.138 ]
+    light.hue_color_candle_6:
+      state: "on"
+      brightness: 20
+      xy_color: [ 0.181, 0.434 ]
+    light.hue_color_candle_7:
+      state: "on"
+      brightness: 20
+      xy_color: [ 0.357, 0.261 ]
+    light.hue_color_candle_8:
+      state: "on"
+      brightness: 20
+      xy_color: [ 0.429, 0.192 ]
+- name: Living Room Pink Blue
+  id: 6b3b9400-6d78-42a6-8778-eca1cd72e9fc
+  entities:
+    light.hue_color_candle_3:
+      state: "on"
+      brightness: 99
+      xy_color: [ 0.158, 0.182 ]
+    light.hue_color_candle_5:
+      state: "on"
+      brightness: 99
+      xy_color: [ 0.278, 0.138 ]
+    light.hue_color_candle_6:
+      state: "on"
+      brightness: 99
+      xy_color: [ 0.181, 0.434 ]
+    light.hue_color_candle_7:
+      state: "on"
+      brightness: 99
+      xy_color: [ 0.357, 0.261 ]
+    light.hue_color_candle_8:
+      state: "on"
+      brightness: 99
+      xy_color: [ 0.429, 0.192 ]
+- name: Living Room Pink Orange TV
+  id: 699be2d5-67d8-443c-b764-9e17f7111bf9
+  entities:
+    light.hue_color_candle_3:
+      state: "on"
+      brightness: 5
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_5:
+      state: "on"
+      brightness: 5
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_6:
+      state: "on"
+      brightness: 5
+      xy_color: [ 0.429, 0.188 ]
+    light.hue_color_candle_7:
+      state: "on"
+      brightness: 5
+      xy_color: [ 0.504, 0.389 ]
+    light.hue_color_candle_8:
+      state: "on"
+      brightness: 5
+      xy_color: [ 0.546, 0.341 ]
+- name: Living Room Pink Orange
+  id: 77562df5-06fb-47f8-90ea-93800b71d705
+  entities:
+    light.hue_color_candle_3:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_5:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_6:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.429, 0.188 ]
+    light.hue_color_candle_7:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.504, 0.389 ]
+    light.hue_color_candle_8:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.546, 0.341 ]
+- name: Living Room Pink Orange Away TV
+  id: 391108e4-ca32-424f-949c-c31dfb09afd8
+  entities:
+    light.hue_color_candle_3:
+      state: "off"
+    light.hue_color_candle_5:
+      state: "on"
+      brightness: 20
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_6:
+      state: "off"
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"
+- name: Living Room Pink Orange Away
+  id: d693ee67-4fc4-4f21-9fd4-76f87cbc4908
+  entities:
+    light.hue_color_candle_3:
+      state: "off"
+    light.hue_color_candle_5:
+      state: "on"
+      brightness: 20
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_6:
+      state: "off"
+    light.hue_color_candle_7:
+      state: "off"
+    light.hue_color_candle_8:
+      state: "off"

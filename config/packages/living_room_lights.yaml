@@ -1,0 +1,150 @@
+automation:
+- alias: Living Room Lights - Dimmer
+  description: ""
+  use_blueprint:
+    path: EPMatt/philips_324131092621.yaml
+    input:
+      integration: ZHA
+      controller_device: 9533deb044e21b7ac4f76980de8c1e7c
+      helper_last_controller_event: input_text.living_room_dimmer_last_command
+      action_button_on_short:
+        - choose:
+            - conditions:
+                - condition: and
+                  conditions:
+                    - condition: state
+                      entity_id: input_boolean.living_room_bfl
+                      state: "off"
+                    - condition: or
+                      conditions:
+                        - condition: state
+                          entity_id: light.living_room
+                          state: "on"
+                        - condition: state
+                          entity_id: input_text.living_room_scene
+                          state: living_room_off
+              sequence:
+                - service: input_boolean.turn_on
+                  data:
+                    entity_id: input_boolean.living_room_bfl
+            - conditions:
+                - condition: state
+                  entity_id: light.living_room
+                  state: "off"
+              sequence:
+                - service: scene.turn_on
+                  data_template:
+                    transition: 0.1
+                    entity_id: scene.{{ states('input_text.living_room_scene') }}
+      action_button_off_short:
+        - choose:
+            - conditions:
+                - condition: state
+                  entity_id: input_boolean.living_room_bfl
+                  state: "on"
+              sequence:
+                - service: input_boolean.turn_off
+                  data:
+                    entity_id: input_boolean.living_room_bfl
+            - conditions:
+                - condition: state
+                  entity_id: input_boolean.living_room_bfl
+                  state: "off"
+              sequence:
+                - service: scene.turn_on
+                  data_template:
+                    transition: 0.1
+                    entity_id: scene.living_room_off
+      action_button_up_short:
+        - service: light.turn_on
+          target:
+            area_id: living_room
+          data:
+            brightness_step: 50
+      action_button_down_short:
+        - service: light.turn_on
+          target:
+            area_id: living_room
+          data:
+            brightness_step: -50
+      action_button_up_long:
+        - service: light.turn_on
+          target:
+            area_id: living_room
+          data:
+            brightness_step: 25
+      action_button_down_long:
+        - service: light.turn_on
+          target:
+            area_id: living_room
+          data:
+            brightness_step: -25
+      button_up_long_loop: true
+      button_down_long_loop: true
+
+- alias: Living Room Lights - BFL On
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: input_boolean.living_room_bfl
+      to: "on"
+  action:
+  - service: scene.turn_on
+    data:
+      transition: 0.2
+    target:
+      entity_id: scene.living_room_bright
+
+- alias: Living Room Lights - BFL Off
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: input_boolean.living_room_bfl
+    to: "off"
+  action:
+  - service: scene.turn_on
+    data_template:
+      transition: 0.1
+      entity_id: "scene.{{ states('input_text.living_room_scene') }}"
+
+- alias: Living Room Lights - Scene Automation without TV
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: input_text.living_room_scene
+    - platform: state
+      entity_id: media_player.lg_webos_tv_oled55e9pla
+  condition:
+  - condition: state
+    entity_id: input_boolean.living_room_bfl
+    state:  "off"
+  - condition: not
+    conditions:
+      - condition: state
+        entity_id: media_player.lg_webos_tv_oled55e9pla
+        state: "on"
+  action:
+  - service: scene.turn_on
+    data_template:
+      transition: 5
+      entity_id: "scene.{{ states('input_text.living_room_scene') }}"
+
+- alias: Living Room Lights - Scene Automation with TV
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: input_text.living_room_scene
+    - platform: state
+      entity_id: media_player.lg_webos_tv_oled55e9pla
+  condition:
+  - condition: state
+    entity_id: input_boolean.living_room_bfl
+    state:  "off"
+  - condition: state
+    entity_id: media_player.lg_webos_tv_oled55e9pla
+    state: "on"
+  action:
+  - service: scene.turn_on
+    data_template:
+      transition: 5
+      entity_id: "scene.{{ states('input_text.living_room_scene') }}_tv"

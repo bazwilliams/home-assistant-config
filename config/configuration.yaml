@@ -64,6 +64,9 @@ input_boolean:
   kitchen_bfl:
     name: Kitchen should be bright
     initial: off
+  living_room_bfl:
+    name: Living Room should be bright
+    initial: off
 
 light:
   - platform: group
