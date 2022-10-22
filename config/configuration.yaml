@@ -67,6 +67,12 @@ input_boolean:
   living_room_bfl:
     name: Living Room should be bright
     initial: off
+  hallway_bfl:
+    name: Hallway should be bright
+    initial: off
+  snug_bfl:
+    name: Snug should be bright
+    initial: off
 
 light:
   - platform: group
