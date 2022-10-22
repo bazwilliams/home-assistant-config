@@ -769,3 +769,190 @@
       state: "off"
     light.hue_color_candle_8:
       state: "off"
+- name: Snug Off
+  id: 3e86d181-d305-4a57-9114-36c04c84a448
+  entities:
+    light.steampunk_lamp: off
+    light.snug_1: off
+    light.snug_2: off
+    light.snug_ceiling_strip_1: off
+    light.snug_ceiling_strip_2: off
+    light.snug_lava_lamp: off
+    light.gaming_shelf_light_3: off
+    light.snug_records_shelf: off
+    light.movie_shelf_light: off
+- name: Snug Movie
+  id: c4a737db-3a44-4130-8fa1-9dc0c8147d4a
+  entities:
+    light.steampunk_lamp: off
+    light.snug_1: off
+    light.snug_2: off
+    light.snug_ceiling_strip_1:
+      state: "on"
+      brightness: 5
+      xy_color:
+        - 0.701
+        - 0.299
+    light.snug_ceiling_strip_2:
+      state: "on"
+      brightness: 5
+      xy_color:
+        - 0.701
+        - 0.299
+    light.snug_lava_lamp: off
+    light.gaming_shelf_light_3: off
+    light.snug_records_shelf: off
+    light.movie_shelf_light: off
+- name: Snug Music
+  id: ab4a46a4-d4cc-453d-b0e1-0c0b89f5b220
+  entities:
+    light.steampunk_lamp: off
+    light.snug_1:
+      state: "on"
+      brightness: 1
+      color_temp: 650
+    light.snug_2: off
+    light.snug_ceiling_strip_1:
+      state: "on"
+      brightness: 15
+      xy_color:
+        - 0.138
+        - 0.07
+    light.snug_ceiling_strip_2:
+      state: "on"
+      brightness: 15
+      xy_color:
+        - 0.138
+        - 0.07
+    light.snug_lava_lamp: on
+    light.gaming_shelf_light_3: off
+    light.snug_records_shelf: off
+    light.movie_shelf_light: off
+- name: Snug LP12
+  id: b7416c6c-1a8c-41db-bf05-02532d1ed36a
+  entities:
+    light.steampunk_lamp:
+      state: "on"
+      brightness: 1
+      xy_color:
+        - 0.222
+        - 0.079
+    light.snug_1:
+      state: "on"
+      brightness: 1
+      color_temp: 650
+    light.snug_2:
+      state: "on"
+      brightness: 1
+      color_temp: 650
+    light.snug_ceiling_strip_1:
+      state: "on"
+      brightness: 15
+      xy_color:
+        - 0.138
+        - 0.07
+    light.snug_ceiling_strip_2:
+      state: "on"
+      brightness: 15
+      xy_color:
+        - 0.138
+        - 0.07
+    light.snug_lava_lamp: on
+    light.gaming_shelf_light_3: off
+    light.snug_records_shelf: on
+    light.movie_shelf_light: off
+- name: Snug Bright
+  id: dacd3574-cc6c-4db0-ab05-9d08b16bc586
+  entities:
+    light.steampunk_lamp: off
+    light.snug_lava_lamp: off
+    light.snug_ceiling_strip_1:
+      state: "on"
+      brightness: 255
+      color_temp: 153
+    light.snug_ceiling_strip_2:
+      state: "on"
+      brightness: 255
+      color_temp: 153
+    light.snug_1:
+      state: "on"
+      brightness: 255
+      color_temp: 140
+    light.snug_2:
+      state: "on"
+      brightness: 255
+      color_temp: 140
+    light.gaming_shelf_light_3:
+      state: "on"
+      color_temp: 140
+      brightness: 255
+    light.snug_records_shelf:
+      state: "on"
+    light.movie_shelf_light:
+      state: "on"
+      brightness: 255
+- name: Snug Chill
+  id: 240e9405-fc16-449e-b55e-128c8b23e54b
+  entities:
+    light.steampunk_lamp:
+      state: "on"
+      brightness: 13
+      xy_color: [ 0.3824, 0.1596 ]
+    light.snug_ceiling_strip_1:
+      state: "on"
+      brightness: 82
+      xy_color:
+      - 0.675
+      - 0.32
+    light.snug_ceiling_strip_2:
+      state: "on"
+      brightness: 82
+      xy_color:
+      - 0.675
+      - 0.32
+    light.snug_1:
+      state: "on"
+      brightness: 1
+      color_temp: 650
+    light.snug_2:
+      state: "on"
+      brightness: 1
+      color_temp: 650
+    light.snug_lava_lamp: on
+    light.gaming_shelf_light_3:
+      state: "on"
+      brightness: 112
+      xy_color: [ 0.137, 0.065 ]
+    light.snug_records_shelf:
+      state: "on"
+    light.movie_shelf_light:
+      state: "on"
+      brightness: 70
+- name: Snug Gaming
+  id: 6b4e8913-24e5-422b-8165-7cb611b775e6
+  entities:
+    light.steampunk_lamp:
+      state: "on"
+      brightness: 1
+      xy_color: [ 0.137, 0.065 ]
+    light.snug_ceiling_strip_1:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.137, 0.065 ]
+    light.snug_ceiling_strip_2:
+      state: "on"
+      brightness: 59
+      xy_color: [ 0.137, 0.065 ]
+    light.snug_1:
+      state: "off"
+    light.snug_2:
+      state: "off"
+    light.snug_lava_lamp: on
+    light.gaming_shelf_light_3:
+      state: "on"
+      brightness: 112
+      xy_color: [ 0.137, 0.065 ]
+    light.snug_records_shelf:
+      state: "off"
+    light.movie_shelf_light:
+      state: "off"

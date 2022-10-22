@@ -1,0 +1,103 @@
+automation:
+- alias: Snug Lights - Dimmer
+  description: ""
+  use_blueprint:
+    path: EPMatt/philips_324131092621.yaml
+    input:
+      integration: ZHA
+      controller_device: 76125c32f6c48530d13d12cc3c998736
+      helper_last_controller_event: input_text.snug_dimmer_last_command
+      action_button_on_short:
+        - choose:
+          - conditions:
+            - condition: and
+              conditions:
+                - condition: state
+                  entity_id: input_boolean.snug_bfl
+                  state: "off"
+                - condition: state
+                  entity_id: light.snug_lights
+                  state: "on"
+            sequence:
+              - service: input_boolean.turn_on
+                data:
+                  entity_id: input_boolean.snug_bfl
+          - conditions:
+              - condition: state
+                entity_id: light.snug_lights
+                state: "off"
+            sequence:
+              - service: scene.turn_on
+                data_template:
+                  transition: 0.1
+                  entity_id: scene.{{ states('input_text.snug_scene') }}
+      action_button_off_short:
+        - choose:
+            - conditions:
+                - condition: state
+                  entity_id: input_boolean.snug_bfl
+                  state: "on"
+              sequence:
+                - service: input_boolean.turn_off
+                  data:
+                    entity_id: input_boolean.snug_bfl
+            - conditions:
+                - condition: state
+                  entity_id: input_boolean.snug_bfl
+                  state: "off"
+              sequence:
+                - service: scene.turn_on
+                  data_template:
+                    transition: 0.1
+                    entity_id: scene.snug_off
+      action_button_up_short:
+        - service: light.turn_on
+          target:
+            area_id: snug
+          data:
+            brightness_step: 50
+      action_button_down_short:
+        - service: light.turn_on
+          target:
+            area_id: snug
+          data:
+            brightness_step: -50
+      action_button_up_long:
+        - service: light.turn_on
+          target:
+            area_id: snug
+          data:
+            brightness_step: 25
+      action_button_down_long:
+        - service: light.turn_on
+          target:
+            area_id: snug
+          data:
+            brightness_step: -25
+      button_up_long_loop: true
+      button_down_long_loop: true
+
+- alias: Snug Lights - BFL On
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: input_boolean.snug_bfl
+      to: "on"
+  action:
+  - service: scene.turn_on
+    data:
+      transition: 0.2
+    target:
+      entity_id: scene.snug_bright
+
+- alias: Snug Lights - BFL Off
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: input_boolean.snug_bfl
+    to: "off"
+  action:
+  - service: scene.turn_on
+    data_template:
+      transition: 0.1
+      entity_id: "scene.{{ states('input_text.snug_scene') }}"

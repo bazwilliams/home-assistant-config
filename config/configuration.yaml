@@ -29,7 +29,7 @@ input_text:
     name: ZHA Last Command - Living Room Music Shortcut
   living_room_dimmer_last_command:
     name: ZHA Last Command - Living Room Dimmer
-  lsnug_dimmer_last_command:
+  snug_dimmer_last_command:
     name: ZHA Last Command - Snug Dimmer
   kitchen_music_shortcut_last_command:
     name: ZHA Last Command - Kitchen Music Shortcut
@@ -59,6 +59,9 @@ input_text:
   upstairs_hallway_scene:
     name: Upstairs Hallway Scene
     initial: upstairs_hallway_night
+  snug_scene:
+    name: Snug Scene
+    initial: snug_chill
 
 input_boolean:
   kitchen_bfl:
@@ -85,3 +88,21 @@ light:
       - light.kitchen_under_cupboards
       - light.kitchen_under_tall_cupboards
       - light.back_garden_light
+  - platform: group
+    name: Snug Lights
+    entities:
+      - light.lava_lamp
+      - light.snug_1
+      - light.snug_2
+      - light.movie_shelf_light
+      - light.snug_records_shelf
+      - light.gaming_shelf_light_3
+      - light.steampunk_lamp
+      - light.snug_ceiling_strip_1
+      - light.snug_ceiling_strip_2
+  - platform: switch
+    name: Snug Lava Lamp
+    entity_id: switch.lava_lamp
+  - platform: switch
+    name: Snug Records Shelf
+    entity_id: switch.records_light_switch
