@@ -1,11 +1,11 @@
 binary_sensor:
   - platform: group
-    unique_id: group_hallway_occupancy
-    name: "Hallway Occupancy"
-    device_class: occupancy
+    unique_id: group_hallway_motion
+    name: "Hallway Motion"
+    device_class: motion
     entities:
-    - binary_sensor.staircase_occupancy
-    - binary_sensor.upstairs_hallway_occupancy
+    - binary_sensor.staircase_motion
+    - binary_sensor.upstairs_hallway_motion
 
 automation:
 
@@ -45,18 +45,18 @@ automation:
   mode: single
   trigger:
     - platform: state
-      entity_id: binary_sensor.hallway_occupancy
+      entity_id: binary_sensor.hallway_motion
       from: "off"
       to: "on"
     - platform: numeric_state
-      entity_id: sensor.upstairs_hallway_occupancy_illuminance
+      entity_id: sensor.upstairs_hallway_illuminance
       below: 30
   condition:
     - condition: numeric_state
-      entity_id: sensor.upstairs_hallway_occupancy_illuminance
+      entity_id: sensor.upstairs_hallway_illuminance
       below: 30
     - condition: state
-      entity_id: binary_sensor.upstairs_hallway_occupancy
+      entity_id: binary_sensor.upstairs_hallway_motion
       state: "on"
     - condition: state
       entity_id: input_boolean.hallway_bfl
@@ -75,12 +75,12 @@ automation:
   mode: single
   trigger:
     - platform: state
-      entity_id: binary_sensor.hallway_occupancy
+      entity_id: binary_sensor.hallway_motion
       to: "off"
       for:
         minutes: 2
     - platform: numeric_state
-      entity_id: sensor.upstairs_hallway_occupancy_illuminance
+      entity_id: sensor.upstairs_hallway_illuminance
       above: 30
   condition:
   - condition: state
