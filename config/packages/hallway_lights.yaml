@@ -71,7 +71,7 @@ automation:
         transition: 1
         entity_id: "scene.{{ states('input_text.staircase_scene') }}"
 
-- alias: Hallway No Motion While not BFL
+- alias: Hallway Lights - No Motion While not BFL
   mode: single
   trigger:
     - platform: state
