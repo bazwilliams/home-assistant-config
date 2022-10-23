@@ -95,13 +95,13 @@ snug_surround:
       data:
         entity_id: input_text.snug_scene
         value: snug_movie
-    # - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
-    # - service: media_player.select_source
-    #   data:
-    #     source: Arcam
-    #   target:
-    #     entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
-    # - service: media_player.turn_on
+    - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
+    - service: media_player.select_source
+      data:
+        source: Arcam
+      target:
+        entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
+    - service: media_player.turn_on
     #   target:
     #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
     # - delay:
@@ -171,12 +171,12 @@ snug_lp12:
       data:
         entity_id: input_text.snug_scene
         value: snug_lp12
-    # - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
-    # - service: media_player.select_source
-    #   data:
-    #     source: LP12
-    #   target:
-    #     entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
+    - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
+    - service: media_player.select_source
+      data:
+        source: LP12
+      target:
+        entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
     # - service: media_player.turn_off
     #   target:
     #     entity_id: media_player.samsung_the_frame_43

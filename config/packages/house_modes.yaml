@@ -100,7 +100,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_daytime
-      living_room_scene: living_room_pink_blue
+      living_room_scene: living_room_dim_outside
       staircase_scene: stairs_colourful
       target_house_mode: daytime_dark_home
       upstairs_hallway_scene: upstairs_hallway_evening
@@ -152,7 +152,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_evening
-      living_room_scene: living_room_pink_blue
+      living_room_scene: living_room_dim_outside
       staircase_scene: stairs_colourful
       target_house_mode: evening_dark_home
       upstairs_hallway_scene: upstairs_hallway_evening
@@ -204,7 +204,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_evening
-      living_room_scene: living_room_pink_blue
+      living_room_scene: living_room_dim_outside
       staircase_scene: stairs_colourful_dimmed
       target_house_mode: late_evening_dark_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -256,7 +256,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_early_night
-      living_room_scene: living_room_pink_orange
+      living_room_scene: living_room_evening
       staircase_scene: stairs_colourful_dimmed
       target_house_mode: early_night_dark_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -308,7 +308,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_late_night
-      living_room_scene: living_room_pink_orange
+      living_room_scene: living_room_evening
       staircase_scene: stairs_late_night
       target_house_mode: late_night_dark_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -464,7 +464,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_pink_blue_away
+      living_room_scene: living_room_dim_outside_away
       staircase_scene: stairs_off
       target_house_mode: daytime_dark_away
       upstairs_hallway_scene: upstairs_hallway_off
@@ -516,7 +516,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_pink_orange_away
+      living_room_scene: living_room_evening_away
       staircase_scene: stairs_off
       target_house_mode: evening_dark_away
       upstairs_hallway_scene: upstairs_hallway_off
@@ -568,7 +568,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_pink_orange_away
+      living_room_scene: living_room_evening_away
       staircase_scene: stairs_off
       target_house_mode: late_evening_dark_away
       upstairs_hallway_scene: upstairs_hallway_off
@@ -620,7 +620,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_pink_orange_away
+      living_room_scene: living_room_evening_away
       staircase_scene: stairs_off
       target_house_mode: early_night_dark_away
       upstairs_hallway_scene: upstairs_hallway_off
@@ -672,7 +672,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_pink_orange_away
+      living_room_scene: living_room_evening_away
       staircase_scene: stairs_off
       target_house_mode: late_night_dark_away
       upstairs_hallway_scene: upstairs_hallway_off

@@ -613,7 +613,7 @@
       state: "on"
       brightness: 30
       xy_color: [  0.267, 0.218 ]
-- name: Living Room Pink Blue Away TV
+- name: Living Room Dim Outside Away TV
   id: 6dc0f73f-5647-4366-b196-0ea1a59e5f4f
   entities:
     light.hue_color_candle_3:
@@ -630,7 +630,7 @@
       state: "off"
     light.hue_color_candle_8:
       state: "off"
-- name: Living Room Pink Blue Away
+- name: Living Room Dim Outside Away
   id: e77de594-f114-45a3-9f10-bfaecfb64630
   entities:
     light.hue_color_candle_3:
@@ -647,7 +647,7 @@
       state: "off"
     light.hue_color_candle_8:
       state: "off"
-- name: Living Room Pink Blue TV
+- name: Living Room Dim Outside TV
   id: c36ec040-647d-4d8b-b4df-3deb9423a732
   entities:
     light.hue_color_candle_3:
@@ -670,7 +670,7 @@
       state: "on"
       brightness: 20
       xy_color: [ 0.429, 0.192 ]
-- name: Living Room Pink Blue
+- name: Living Room Dim Outside
   id: 6b3b9400-6d78-42a6-8778-eca1cd72e9fc
   entities:
     light.hue_color_candle_3:
@@ -693,7 +693,7 @@
       state: "on"
       brightness: 99
       xy_color: [ 0.429, 0.192 ]
-- name: Living Room Pink Orange TV
+- name: Living Room Evening TV
   id: 699be2d5-67d8-443c-b764-9e17f7111bf9
   entities:
     light.hue_color_candle_3:
@@ -716,7 +716,7 @@
       state: "on"
       brightness: 5
       xy_color: [ 0.546, 0.341 ]
-- name: Living Room Pink Orange
+- name: Living Room Evening
   id: 77562df5-06fb-47f8-90ea-93800b71d705
   entities:
     light.hue_color_candle_3:
@@ -739,7 +739,7 @@
       state: "on"
       brightness: 50
       xy_color: [ 0.546, 0.341 ]
-- name: Living Room Pink Orange Away TV
+- name: Living Room Evening Away TV
   id: 391108e4-ca32-424f-949c-c31dfb09afd8
   entities:
     light.hue_color_candle_3:
@@ -754,7 +754,7 @@
       state: "off"
     light.hue_color_candle_8:
       state: "off"
-- name: Living Room Pink Orange Away
+- name: Living Room Evening Away
   id: d693ee67-4fc4-4f21-9fd4-76f87cbc4908
   entities:
     light.hue_color_candle_3:

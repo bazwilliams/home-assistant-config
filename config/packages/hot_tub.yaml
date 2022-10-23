@@ -49,7 +49,7 @@ automation:
   condition:
     - condition: numeric_state
       entity_id: climate.spa_thermostat
-      below: 29Hot Tub - Ensure
+      below: 29
     - condition: time
       weekday:
         - fri
