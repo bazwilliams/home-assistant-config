@@ -1,5 +1,5 @@
 automation:
-- alias: HotTub Set temperatue low for overnight
+- alias: Hot Tub - Set low heat
   mode: single
   initial_state: true
   trigger:
@@ -20,7 +20,7 @@ automation:
     data:
       temperature: 25
 
-- alias: HotTub Ensure Temperature 27
+- alias: Hot Tub - Ensure Temperature 27
   mode: single
   initial_state: true
   trigger:
@@ -40,7 +40,7 @@ automation:
     data:
       temperature: 27
 
-- alias: HotTub Ensure Temperature 29
+- alias: Hot Tub - Ensure Temperature 29
   mode: single
   initial_state: true
   trigger:
@@ -49,7 +49,7 @@ automation:
   condition:
     - condition: numeric_state
       entity_id: climate.spa_thermostat
-      below: 29
+      below: 29Hot Tub - Ensure
     - condition: time
       weekday:
         - fri
@@ -60,7 +60,7 @@ automation:
     data:
       temperature: 29
 
-- alias: HotTub Ensure Temperature 31
+- alias: Hot Tub - Ensure Temperature 31
   mode: single
   initial_state: true
   trigger:
@@ -80,7 +80,7 @@ automation:
     data:
       temperature: 31
 
-- alias: HotTub Ensure Temperature 33
+- alias: Hot Tub - Ensure Temperature 33
   mode: single
   initial_state: true
   trigger:
@@ -100,7 +100,7 @@ automation:
     data:
       temperature: 33
 
-- alias: HotTub Ensure Temperature 35
+- alias: Hot Tub - Ensure Temperature 35
   mode: single
   initial_state: true
   trigger:
@@ -120,7 +120,7 @@ automation:
     data:
       temperature: 35
 
-- alias: HotTub Ensure Temperature 37
+- alias: Hot Tub - Ensure Temperature 37
   mode: single
   initial_state: true
   trigger:
