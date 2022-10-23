@@ -140,7 +140,7 @@
       xy_color:
         - 0.34
         - 0.274
-- name: Downstairs Hallway Daytime Presence
+- name: Downstairs Hallway Daytime Home
   id: 06ab8391-62e0-4f6f-82ca-86de56e96a25
   entities:
     light.downstairs_hallway_1:

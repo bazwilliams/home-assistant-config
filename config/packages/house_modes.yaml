@@ -70,7 +70,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_daytime_presence
+      downstairs_hallway_scene: downstairs_hallway_daytime_home
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_morning
@@ -122,7 +122,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_daytime_presence
+      downstairs_hallway_scene: downstairs_hallway_daytime_home
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_daytime
@@ -226,7 +226,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_daytime_presence
+      downstairs_hallway_scene: downstairs_hallway_daytime_home
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
