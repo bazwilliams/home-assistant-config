@@ -105,3 +105,18 @@ automation:
     data_template:
       transition: 0.1
       entity_id: "scene.{{ states('input_text.snug_scene') }}"
+
+- alias: Snug Lights - Scene Automation
+  mode: single
+  trigger:
+    platform: state
+    entity_id: input_text.snug_scene
+  condition:
+    - condition: state
+      entity_id: input_boolean.snug_bfl
+      state:  "off"
+  action:
+    - service: scene.turn_on
+      data_template:
+        transition: 1
+        entity_id: "scene.{{ states('input_text.snug_scene') }}"
