@@ -74,6 +74,10 @@ automation:
             area_id: snug
           data:
             brightness_step: -25
+      action_button_off_long:
+        - service: script.turn_on
+          target:
+            entity_id: script.snug_off
       button_up_long_loop: true
       button_down_long_loop: true
 

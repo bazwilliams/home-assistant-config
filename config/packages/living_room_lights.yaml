@@ -79,6 +79,13 @@ automation:
             area_id: living_room
           data:
             brightness_step: -25
+      action_button_off_long:
+        - service: switch.turn_off
+          target:
+            entity_id: switch.sneaky_socket_switch
+        - service: media_player.turn_off
+          target:
+            entity_id: media_player.lg_webos_tv_oled55e9pla
       button_up_long_loop: true
       button_down_long_loop: true
 
