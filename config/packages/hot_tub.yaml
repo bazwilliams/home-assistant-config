@@ -1,0 +1,141 @@
+automation:
+- alias: HotTub Set temperatue low for overnight
+  mode: single
+  initial_state: true
+  trigger:
+    platform: time
+    at: '23:00:00'
+  condition:
+    - condition: time
+      weekday:
+        - sun
+        - mon
+        - tue
+        - wed
+        - thu
+  action:
+    service: climate.set_temperature
+    target:
+      entity_id: climate.spa_thermostat
+    data:
+      temperature: 25
+
+- alias: HotTub Ensure Temperature 27
+  mode: single
+  initial_state: true
+  trigger:
+    platform: time
+    at: '13:00:00'
+  condition:
+    - condition: numeric_state
+      entity_id: climate.spa_thermostat
+      below: 27
+    - condition: time
+      weekday:
+        - fri
+  action:
+    service: climate.set_temperature
+    target:
+      entity_id: climate.spa_thermostat
+    data:
+      temperature: 27
+
+- alias: HotTub Ensure Temperature 29
+  mode: single
+  initial_state: true
+  trigger:
+    platform: time
+    at: '14:00:00'
+  condition:
+    - condition: numeric_state
+      entity_id: climate.spa_thermostat
+      below: 29
+    - condition: time
+      weekday:
+        - fri
+  action:
+    service: climate.set_temperature
+    target:
+      entity_id: climate.spa_thermostat
+    data:
+      temperature: 29
+
+- alias: HotTub Ensure Temperature 31
+  mode: single
+  initial_state: true
+  trigger:
+    platform: time
+    at: '15:00:00'
+  condition:
+    - condition: numeric_state
+      entity_id: climate.spa_thermostat
+      below: 31
+    - condition: time
+      weekday:
+        - fri
+  action:
+    service: climate.set_temperature
+    target:
+      entity_id: climate.spa_thermostat
+    data:
+      temperature: 31
+
+- alias: HotTub Ensure Temperature 33
+  mode: single
+  initial_state: true
+  trigger:
+    platform: time
+    at: '16:00:00'
+  condition:
+    - condition: numeric_state
+      entity_id: climate.spa_thermostat
+      below: 33
+    - condition: time
+      weekday:
+        - fri
+  action:
+    service: climate.set_temperature
+    target:
+      entity_id: climate.spa_thermostat
+    data:
+      temperature: 33
+
+- alias: HotTub Ensure Temperature 35
+  mode: single
+  initial_state: true
+  trigger:
+    platform: time
+    at: '17:00:00'
+  condition:
+    - condition: numeric_state
+      entity_id: climate.spa_thermostat
+      below: 35
+    - condition: time
+      weekday:
+        - fri
+  action:
+    service: climate.set_temperature
+    target:
+      entity_id: climate.spa_thermostat
+    data:
+      temperature: 35
+
+- alias: HotTub Ensure Temperature 37
+  mode: single
+  initial_state: true
+  trigger:
+    platform: time
+    at: '18:00:00'
+  condition:
+    - condition: numeric_state
+      entity_id: climate.spa_thermostat
+      below: 37
+    - condition: time
+      weekday:
+        - fri
+  action:
+    service: climate.set_temperature
+    target:
+      entity_id: climate.spa_thermostat
+    data:
+      temperature: 37
