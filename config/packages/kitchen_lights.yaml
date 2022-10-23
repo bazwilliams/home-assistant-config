@@ -1,5 +1,5 @@
 automation:
-- alias: Kitchen Lights Motion While not BFL
+- alias: Kitchen Lights - Motion While not BFL
   mode: single
   condition:
     - condition: numeric_state
@@ -30,7 +30,7 @@ automation:
         transition: 0.5
         entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
 
-- alias: Kitchen Lights No Motion While Not BFL
+- alias: Kitchen Lights - No Motion While Not BFL
   mode: single
   trigger:
     - platform: state
@@ -51,7 +51,7 @@ automation:
         transition: 5
         entity_id: scene.kitchen_off
 
-- alias: Kitchen Bright
+- alias: Kitchen Lights - BFL On
   mode: single
   trigger:
     - platform: state
@@ -63,7 +63,7 @@ automation:
       transition: 0
       entity_id: scene.kitchen_bright
 
-- alias: Kitchen BFL Off
+- alias: Kitchen Lights - BFL Off
   mode: single
   trigger:
   - platform: state
