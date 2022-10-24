@@ -1,0 +1,16 @@
+binary_sensor:
+  - platform: template
+    sensors:
+      heating_on:
+        friendly_name: "Heating Mode"
+        value_template: "{{ is_state_attr('climate.living_room', 'hvac_action', 'heating') or is_state_attr('climate.upstairs', 'hvac_action', 'heating') }}"
+
+sensor:
+  - platform: history_stats
+    name: Heating Time Today
+    entity_id: binary_sensor.heating_on
+    state: true
+    type: time
+    start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
+    duration:
+      hours: 24
