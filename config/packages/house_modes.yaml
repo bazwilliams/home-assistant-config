@@ -96,11 +96,11 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_dimmed
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_hallway_scene: downstairs_hallway_dull_outside
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_daytime
-      living_room_scene: living_room_dim_outside
+      living_room_scene: living_room_dull_outside
       staircase_scene: stairs_dull_outside
       target_house_mode: daytime_dark_home
       upstairs_hallway_scene: upstairs_hallway_evening
@@ -148,11 +148,11 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_dimmed
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_hallway_scene: downstairs_hallway_evening
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_evening
-      living_room_scene: living_room_dim_outside
+      living_room_scene: living_room_evening
       staircase_scene: stairs_evening
       target_house_mode: evening_dark_home
       upstairs_hallway_scene: upstairs_hallway_evening
@@ -161,11 +161,11 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_hallway_scene: downstairs_hallway_evening
       downstairs_toilet_scene: downstairs_toilet_mid
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
-      living_room_scene: living_room_dull_outside
+      living_room_scene: living_room_evening
       staircase_scene: stairs_evening
       target_house_mode: evening_dim_home
       upstairs_hallway_scene: upstairs_hallway_evening
@@ -174,7 +174,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_hallway_scene: downstairs_hallway_evening
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
@@ -200,11 +200,11 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_dimmed
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_hallway_scene: downstairs_hallway_evening
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_evening
-      living_room_scene: living_room_dim_outside
+      living_room_scene: living_room_late_evening
       staircase_scene: stairs_late_evening
       target_house_mode: late_evening_dark_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -213,11 +213,11 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening
+      downstairs_hallway_scene: downstairs_hallway_evening
       downstairs_toilet_scene: downstairs_toilet_mid
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
-      living_room_scene: living_room_dull_outside
+      living_room_scene: living_room_late_evening
       staircase_scene: stairs_late_evening
       target_house_mode: late_evening_dim_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -226,7 +226,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_daytime_home
+      downstairs_hallway_scene: downstairs_hallway_evening
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
@@ -256,7 +256,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_early_night
-      living_room_scene: living_room_evening
+      living_room_scene: living_room_late_evening
       staircase_scene: stairs_late_evening
       target_house_mode: early_night_dark_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -269,7 +269,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mid
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_early_night
-      living_room_scene: living_room_dull_outside
+      living_room_scene: living_room_late_evening
       staircase_scene: stairs_late_evening
       target_house_mode: early_night_dim_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -308,7 +308,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_late_night
-      living_room_scene: living_room_evening
+      living_room_scene: living_room_late_evening
       staircase_scene: stairs_late_night
       target_house_mode: late_night_dark_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -321,7 +321,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mid
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_late_night
-      living_room_scene: living_room_dull_outside
+      living_room_scene: living_room_late_evening
       staircase_scene: stairs_late_night
       target_house_mode: late_night_dim_home
       upstairs_hallway_scene: upstairs_hallway_night
@@ -356,7 +356,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_night
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_night
@@ -369,7 +369,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_night
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_mid
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_night
@@ -382,7 +382,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_night
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_night
@@ -395,7 +395,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_night
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_night
@@ -434,7 +434,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -447,7 +447,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -460,11 +460,11 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_dimmed
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_dim_outside_away
+      living_room_scene: living_room_off
       staircase_scene: stairs_off
       target_house_mode: daytime_dark_away
       upstairs_hallway_scene: upstairs_hallway_off
@@ -473,7 +473,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -486,7 +486,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -499,7 +499,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -512,7 +512,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_dimmed
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening_away
+      downstairs_hallway_scene: downstairs_hallway_evening_away
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_alarm_active
@@ -525,7 +525,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -538,7 +538,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -551,7 +551,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -564,11 +564,11 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_dimmed
-      downstairs_hallway_scene: downstairs_hallway_colourful_evening_away
+      downstairs_hallway_scene: downstairs_hallway_evening_away
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_evening_away
+      living_room_scene: living_room_late_evening_away
       staircase_scene: stairs_off
       target_house_mode: late_evening_dark_away
       upstairs_hallway_scene: upstairs_hallway_off
@@ -577,7 +577,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -590,7 +590,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -603,7 +603,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -620,7 +620,7 @@ automation:
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_evening_away
+      living_room_scene: living_room_late_evening_away
       staircase_scene: stairs_off
       target_house_mode: early_night_dark_away
       upstairs_hallway_scene: upstairs_hallway_off
@@ -642,7 +642,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -655,7 +655,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -668,11 +668,11 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
-      living_room_scene: living_room_evening_away
+      living_room_scene: living_room_late_evening_away
       staircase_scene: stairs_off
       target_house_mode: late_night_dark_away
       upstairs_hallway_scene: upstairs_hallway_off
@@ -681,7 +681,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -694,7 +694,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -707,7 +707,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -720,7 +720,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_mood
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -733,7 +733,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -746,7 +746,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active
@@ -759,7 +759,7 @@ automation:
   use_blueprint:
     input:
       back_garden_scene: back_garden_off
-      downstairs_hallway_scene: downstairs_hallway_off_away
+      downstairs_hallway_scene: downstairs_hallway_off
       downstairs_toilet_scene: downstairs_toilet_bright
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_alarm_active

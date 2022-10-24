@@ -37,31 +37,22 @@ input_text:
     name: ZHA Last Command - Snug Music Shortcut
   back_garden_scene:
     name: Back Garden Scene
-    initial: back_garden_off
   downstairs_hallway_scene:
     name: Downstairs Hallway Scene
-    initial: downstairs_hallway_off
   downstairs_toilet_scene:
     name: Downstairs Toilet Scene
-    initial: downstairs_toilet_bright
   front_garden_scene:
     name: Front Garden Scene
-    initial: front_garden_off
   kitchen_scene:
     name: Kitchen Scene
-    initial: kitchen_morning
   living_room_scene:
     name: Living Room Scene
-    initial: living_room_off
   staircase_scene:
     name: Staircase Scene
-    initial: stairs_off
   upstairs_hallway_scene:
     name: Upstairs Hallway Scene
-    initial: upstairs_hallway_night
   snug_scene:
     name: Snug Scene
-    initial: snug_chill
 
 input_boolean:
   kitchen_bfl:

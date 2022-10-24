@@ -1,18 +1,4 @@
-- name: Downstairs Hallway Night
-  id: 7c88a317-954e-4088-8b2a-91c035d8eb64
-  entities:
-    light.downstairs_hallway_1:
-      state: "off"
-    light.downstairs_hallway_2:
-      state: "off"
-    light.downstairs_hallway_3:
-      state: "off"
-    light.downstairs_hallway_4:
-      state: "off"
-    light.downstairs_hallway_5:
-      state: "off"
-    light.downstairs_hallway_6:
-      state: "off"
+
 - name: Downstairs Hallway Off
   id: d9ae0bbc-8e67-4945-8070-44e541f9aed4
   entities:
@@ -28,16 +14,7 @@
       state: "off"
     light.downstairs_hallway_6:
       state: "off"
-- name: Downstairs Hallway Off Away
-  id: f94095e7-e009-40f0-992b-1572e4a8ca5e
-  entities:
-    light.downstairs_hallway_1: off
-    light.downstairs_hallway_2: off
-    light.downstairs_hallway_3: off
-    light.downstairs_hallway_4: off
-    light.downstairs_hallway_5: off
-    light.downstairs_hallway_6: off
-- name: Downstairs Hallway Colourful Evening
+- name: Downstairs Hallway Evening
   id: 62cbe636-b8c0-405d-8991-a5c749ef4e5e
   entities:
     light.downstairs_hallway_1:
@@ -76,7 +53,7 @@
       xy_color:
         - 0.282
         - 0.12
-- name: Downstairs Hallway Colourful Evening Away
+- name: Downstairs Hallway Evening Away
   id: a3327617-6798-4784-8cc5-a5c0a048069e
   entities:
     light.downstairs_hallway_1:
@@ -613,24 +590,7 @@
       state: "on"
       brightness: 30
       xy_color: [  0.267, 0.218 ]
-- name: Living Room Dim Outside Away TV
-  id: 6dc0f73f-5647-4366-b196-0ea1a59e5f4f
-  entities:
-    light.hue_color_candle_3:
-      state: "on"
-      brightness: 50
-      xy_color: [ 0.158, 0.182 ]
-    light.hue_color_candle_5:
-      state: "off"
-    light.hue_color_candle_6:
-      state: "on"
-      brightness: 50
-      xy_color: [ 0.181, 0.434 ]
-    light.hue_color_candle_7:
-      state: "off"
-    light.hue_color_candle_8:
-      state: "off"
-- name: Living Room Dim Outside Away
+- name: Living Room Evening Away
   id: e77de594-f114-45a3-9f10-bfaecfb64630
   entities:
     light.hue_color_candle_3:
@@ -647,7 +607,7 @@
       state: "off"
     light.hue_color_candle_8:
       state: "off"
-- name: Living Room Dim Outside TV
+- name: Living Room Evening TV
   id: c36ec040-647d-4d8b-b4df-3deb9423a732
   entities:
     light.hue_color_candle_3:
@@ -670,7 +630,7 @@
       state: "on"
       brightness: 20
       xy_color: [ 0.429, 0.192 ]
-- name: Living Room Dim Outside
+- name: Living Room Evening
   id: 6b3b9400-6d78-42a6-8778-eca1cd72e9fc
   entities:
     light.hue_color_candle_3:
@@ -693,7 +653,7 @@
       state: "on"
       brightness: 99
       xy_color: [ 0.429, 0.192 ]
-- name: Living Room Evening TV
+- name: Living Room Late Evening TV
   id: 699be2d5-67d8-443c-b764-9e17f7111bf9
   entities:
     light.hue_color_candle_3:
@@ -716,7 +676,7 @@
       state: "on"
       brightness: 5
       xy_color: [ 0.546, 0.341 ]
-- name: Living Room Evening
+- name: Living Room Late Evening
   id: 77562df5-06fb-47f8-90ea-93800b71d705
   entities:
     light.hue_color_candle_3:
@@ -739,22 +699,7 @@
       state: "on"
       brightness: 50
       xy_color: [ 0.546, 0.341 ]
-- name: Living Room Evening Away TV
-  id: 391108e4-ca32-424f-949c-c31dfb09afd8
-  entities:
-    light.hue_color_candle_3:
-      state: "off"
-    light.hue_color_candle_5:
-      state: "on"
-      brightness: 20
-      xy_color: [ 0.571, 0.345 ]
-    light.hue_color_candle_6:
-      state: "off"
-    light.hue_color_candle_7:
-      state: "off"
-    light.hue_color_candle_8:
-      state: "off"
-- name: Living Room Evening Away
+- name: Living Room Late Evening Away
   id: d693ee67-4fc4-4f21-9fd4-76f87cbc4908
   entities:
     light.hue_color_candle_3:
