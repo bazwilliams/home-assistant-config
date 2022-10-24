@@ -101,7 +101,7 @@ automation:
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_daytime
       living_room_scene: living_room_dim_outside
-      staircase_scene: stairs_colourful
+      staircase_scene: stairs_dull_outside
       target_house_mode: daytime_dark_home
       upstairs_hallway_scene: upstairs_hallway_evening
     path: bazwilliams/scene_setter.yaml
@@ -114,7 +114,7 @@ automation:
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_daytime
       living_room_scene: living_room_dull_outside
-      staircase_scene: stairs_colourful
+      staircase_scene: stairs_dull_outside
       target_house_mode: daytime_dim_home
       upstairs_hallway_scene: upstairs_hallway_daytime
     path: bazwilliams/scene_setter.yaml
@@ -153,7 +153,7 @@ automation:
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_evening
       living_room_scene: living_room_dim_outside
-      staircase_scene: stairs_colourful
+      staircase_scene: stairs_evening
       target_house_mode: evening_dark_home
       upstairs_hallway_scene: upstairs_hallway_evening
     path: bazwilliams/scene_setter.yaml
@@ -166,7 +166,7 @@ automation:
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
       living_room_scene: living_room_dull_outside
-      staircase_scene: stairs_colourful
+      staircase_scene: stairs_evening
       target_house_mode: evening_dim_home
       upstairs_hallway_scene: upstairs_hallway_evening
     path: bazwilliams/scene_setter.yaml
@@ -179,7 +179,7 @@ automation:
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
       living_room_scene: living_room_off
-      staircase_scene: stairs_decorative_pastel
+      staircase_scene: stairs_off
       target_house_mode: evening_bright_home
       upstairs_hallway_scene: upstairs_hallway_daytime
     path: bazwilliams/scene_setter.yaml
@@ -205,7 +205,7 @@ automation:
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_evening
       living_room_scene: living_room_dim_outside
-      staircase_scene: stairs_colourful_dimmed
+      staircase_scene: stairs_late_evening
       target_house_mode: late_evening_dark_home
       upstairs_hallway_scene: upstairs_hallway_night
     path: bazwilliams/scene_setter.yaml
@@ -218,7 +218,7 @@ automation:
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
       living_room_scene: living_room_dull_outside
-      staircase_scene: stairs_colourful_dimmed
+      staircase_scene: stairs_late_evening
       target_house_mode: late_evening_dim_home
       upstairs_hallway_scene: upstairs_hallway_night
     path: bazwilliams/scene_setter.yaml
@@ -231,7 +231,7 @@ automation:
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_evening
       living_room_scene: living_room_off
-      staircase_scene: stairs_decorative_pastel
+      staircase_scene: stairs_off
       target_house_mode: late_evening_bright_home
       upstairs_hallway_scene: upstairs_hallway_night
     path: bazwilliams/scene_setter.yaml
@@ -257,7 +257,7 @@ automation:
       front_garden_scene: front_garden_dimmed
       kitchen_scene: kitchen_early_night
       living_room_scene: living_room_evening
-      staircase_scene: stairs_colourful_dimmed
+      staircase_scene: stairs_late_evening
       target_house_mode: early_night_dark_home
       upstairs_hallway_scene: upstairs_hallway_night
     path: bazwilliams/scene_setter.yaml
@@ -270,7 +270,7 @@ automation:
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_early_night
       living_room_scene: living_room_dull_outside
-      staircase_scene: stairs_colourful_dimmed
+      staircase_scene: stairs_late_evening
       target_house_mode: early_night_dim_home
       upstairs_hallway_scene: upstairs_hallway_night
     path: bazwilliams/scene_setter.yaml
@@ -283,7 +283,7 @@ automation:
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_early_night
       living_room_scene: living_room_off
-      staircase_scene: stairs_colourful_dimmed
+      staircase_scene: stairs_off
       target_house_mode: early_night_bright_home
       upstairs_hallway_scene: upstairs_hallway_night
     path: bazwilliams/scene_setter.yaml
@@ -335,7 +335,7 @@ automation:
       front_garden_scene: front_garden_off
       kitchen_scene: kitchen_late_night
       living_room_scene: living_room_off
-      staircase_scene: stairs_decorative_pastel
+      staircase_scene: stairs_off
       target_house_mode: late_night_bright_home
       upstairs_hallway_scene: upstairs_hallway_night
     path: bazwilliams/scene_setter.yaml

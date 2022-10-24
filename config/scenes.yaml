@@ -1044,7 +1044,7 @@
       state: "on"
       brightness: 29
       color_temp: 379
-- name: Stairs Colourful
+- name: Stairs Late Evening
   id: 47157d84-5f4f-40b9-90b6-8a09d7fb7c06
   entities:
     light.stair_1:
@@ -1069,7 +1069,7 @@
       state: "on"
       brightness: 116
       color_temp: 156
-- name: Stairs Colourful Dimmed
+- name: Stairs Dull Outside
   id: 10dfd71e-63bb-4aa8-9cb9-e948d355f332
   entities:
     light.stair_1:
@@ -1132,7 +1132,7 @@
         - 0.31
     light.stair_3: off
     light.stair_spot: off
-- name: Stairs Decorative Pastel
+- name: Stairs Evening
   id: d07df3c5-ba9e-42cd-b6f4-0ec318978de6
   entities:
     light.stair_1:
@@ -1217,6 +1217,7 @@
       brightness: 17
       color_temp: 454
 - name: Upstairs Hallway Off
+  id: 1bf46562-34d6-4a92-b7c2-34c99dfaf0ff
   entities:
     light.upstairs_spot_1:
       state: "off"
