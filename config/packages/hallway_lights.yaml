@@ -4,141 +4,140 @@ binary_sensor:
     name: "Hallway Motion"
     device_class: motion
     entities:
-    - binary_sensor.staircase_motion
-    - binary_sensor.upstairs_hallway_motion
+      - binary_sensor.staircase_motion
+      - binary_sensor.upstairs_hallway_motion
 
 automation:
+  - alias: Hallway Lights - BFL On
+    mode: single
+    trigger:
+      - platform: state
+        entity_id: input_boolean.hallway_bfl
+        to: "on"
+    action:
+      - service: scene.turn_on
+        data_template:
+          transition: 0
+          entity_id: scene.hallway_bright
 
-- alias: Hallway Lights - BFL On
-  mode: single
-  trigger:
-    - platform: state
-      entity_id: input_boolean.hallway_bfl
-      to: "on"
-  action:
-  - service: scene.turn_on
-    data_template:
-      transition: 0
-      entity_id: scene.hallway_bright
+  - alias: Hallway Lights - BFL Off
+    mode: single
+    trigger:
+      - platform: state
+        entity_id: input_boolean.hallway_bfl
+        to: "off"
+    action:
+      - service: scene.turn_on
+        data_template:
+          transition: 5
+          entity_id: "scene.{{ states('input_text.upstairs_hallway_scene') }}"
+      - service: scene.turn_on
+        data_template:
+          transition: 5
+          entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
+      - service: scene.turn_on
+        data_template:
+          transition: 5
+          entity_id: "scene.{{ states('input_text.staircase_scene') }}"
 
-- alias: Hallway Lights - BFL Off
-  mode: single
-  trigger:
-  - platform: state
-    entity_id: input_boolean.hallway_bfl
-    to: "off"
-  action:
-  - service: scene.turn_on
-    data_template:
-      transition: 5
-      entity_id: "scene.{{ states('input_text.upstairs_hallway_scene') }}"
-  - service: scene.turn_on
-    data_template:
-      transition: 5
-      entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
-  - service: scene.turn_on
-    data_template:
-      transition: 5
-      entity_id: "scene.{{ states('input_text.staircase_scene') }}"
+  - alias: Upstairs Hallway Lights - Motion while not BFL
+    mode: single
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.hallway_motion
+        from: "off"
+        to: "on"
+      - platform: numeric_state
+        entity_id: sensor.upstairs_hallway_illuminance
+        below: 30
+    condition:
+      - condition: numeric_state
+        entity_id: sensor.upstairs_hallway_illuminance
+        below: 30
+      - condition: state
+        entity_id: binary_sensor.hallway_motion
+        state: "on"
+      - condition: state
+        entity_id: input_boolean.hallway_bfl
+        state: "off"
+    action:
+      - service: scene.turn_on
+        data_template:
+          transition: 1
+          entity_id: "scene.{{ states('input_text.upstairs_hallway_scene') }}"
+      - service: scene.turn_on
+        data_template:
+          transition: 1
+          entity_id: "scene.{{ states('input_text.staircase_scene') }}"
 
-- alias: Upstairs Hallway - Occupancy While not BFL
-  mode: single
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.hallway_motion
-      from: "off"
-      to: "on"
-    - platform: numeric_state
-      entity_id: sensor.upstairs_hallway_illuminance
-      below: 30
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.upstairs_hallway_illuminance
-      below: 30
-    - condition: state
-      entity_id: binary_sensor.upstairs_hallway_motion
-      state: "on"
-    - condition: state
-      entity_id: input_boolean.hallway_bfl
-      state:  "off"
-  action:
-    - service: scene.turn_on
-      data_template:
-        transition: 1
-        entity_id: "scene.{{ states('input_text.upstairs_hallway_scene') }}"
-    - service: scene.turn_on
-      data_template:
-        transition: 1
-        entity_id: "scene.{{ states('input_text.staircase_scene') }}"
+  - alias: Upstairs Hallway Lights - No Motion While not BFL
+    mode: single
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.hallway_motion
+        to: "off"
+        for:
+          minutes: 1
+      - platform: numeric_state
+        entity_id: sensor.upstairs_hallway_illuminance
+        above: 30
+    condition:
+      - condition: state
+        entity_id: input_boolean.hallway_bfl
+        state: "off"
+    action:
+      - service: scene.turn_on
+        data:
+          transition: 5
+          entity_id: scene.upstairs_hallway_off
+      - service: scene.turn_on
+        data:
+          transition: 5
+          entity_id: scene.stairs_off
 
-- alias: Hallway Lights - No Motion While not BFL
-  mode: single
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.hallway_motion
-      to: "off"
-      for:
-        minutes: 2
-    - platform: numeric_state
-      entity_id: sensor.upstairs_hallway_illuminance
-      above: 30
-  condition:
-  - condition: state
-    entity_id: input_boolean.hallway_bfl
-    state:  "off"
-  action:
-    - service: scene.turn_on
-      data:
-        transition: 5
-        entity_id: scene.upstairs_hallway_off
-    - service: scene.turn_on
-      data:
-        transition: 5
-        entity_id: scene.stairs_off
+  - alias: Upstairs Hallway Lights - Scene Changed to Off While not BFL
+    mode: single
+    trigger:
+      platform: state
+      entity_id: input_text.upstairs_hallway_scene
+      to: "upstairs_hallway_off"
+    condition:
+      - condition: state
+        entity_id: input_boolean.hallway_bfl
+        state: "off"
+    action:
+      - service: scene.turn_on
+        data:
+          transition: 5
+          entity_id: scene.upstairs_hallway_off
 
-- alias: Upstairs Hallway Lights - Scene Changed to Off While not BFL
-  mode: single
-  trigger:
-    platform: state
-    entity_id: input_text.upstairs_hallway_scene
-    to: "upstairs_hallway_off"
-  condition:
-  - condition: state
-    entity_id: input_boolean.hallway_bfl
-    state:  "off"
-  action:
-    - service: scene.turn_on
-      data:
-        transition: 5
-        entity_id: scene.upstairs_hallway_off
+  - alias: Downstairs Hallway Lights - Scene Automation
+    mode: single
+    trigger:
+      platform: state
+      entity_id: input_text.downstairs_hallway_scene
+    condition:
+      - condition: state
+        entity_id: input_boolean.hallway_bfl
+        state: "off"
+    action:
+      - service: scene.turn_on
+        data_template:
+          transition: 10
+          entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
 
-- alias: Downstairs Hallway Lights - Scene Automation
-  mode: single
-  trigger:
-    platform: state
-    entity_id: input_text.downstairs_hallway_scene
-  condition:
-  - condition: state
-    entity_id: input_boolean.hallway_bfl
-    state:  "off"
-  action:
-    - service: scene.turn_on
-      data_template:
-        transition: 10
-        entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
-
-- alias: Staircase Lights - Scene Changed to Off While Not BFL
-  mode: single
-  trigger:
-    platform: state
-    entity_id: input_text.staircase_scene
-    to: "stairs_off"
-  condition:
-  - condition: state
-    entity_id: input_boolean.hallway_bfl
-    state:  "off"
-  action:
-    - service: scene.turn_on
-      data:
-        transition: 5
-        entity_id: scene.stairs_off
+  - alias: Staircase Lights - Scene Changed to Off While Not BFL
+    mode: single
+    trigger:
+      platform: state
+      entity_id: input_text.staircase_scene
+      to: "stairs_off"
+    condition:
+      - condition: state
+        entity_id: input_boolean.hallway_bfl
+        state: "off"
+    action:
+      - service: scene.turn_on
+        data:
+          transition: 5
+          entity_id: scene.stairs_off
