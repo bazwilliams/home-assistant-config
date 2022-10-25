@@ -9,13 +9,13 @@ sensor:
           {% set time_slot = "early_night" %}
           {% elif now().hour | int >= 20 %}
           {% set time_slot = "late_evening" %}
-          {% elif now().hour | int >= 19 %}
+          {% elif now().hour | int >= 18 %}
           {% set time_slot = "evening" %}
           {% elif now().hour | int >= 8 %}
           {% set time_slot = "daytime" %}
-          {% elif now().hour | int >= 6 and now().minute | int >=30 %}
+          {% elif now().hour | int >= 6 and now().minute | int >=30 or now().hour | int >= 7 %}
           {% set time_slot = "morning" %}
-          {% elif now().hour | int >= 1 and now().minute | int >=30 %}
+          {% elif now().hour | int >= 1 and now().minute | int >=30 or now().hour | int >= 2 %}
           {% set time_slot = "night" %}
           {% elif now().hour | int >= 0 %}
           {% set time_slot = "late_night" %}
@@ -31,6 +31,7 @@ sensor:
           {% endif %}
           {% set presence = "home" %}
           {{ time_slot }}_{{ light_slot }}_{{ presence }}
+
 
 automation:
 - alias: Update house mode
