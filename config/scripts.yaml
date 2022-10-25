@@ -52,9 +52,9 @@ projector_on:
   alias: Projector On
   mode: restart
   sequence:
-    # - service: switch.turn_on
-    #   target:
-    #     entity_id: switch.benq_projector
+    - service: switch.turn_on
+      target:
+        entity_id: switch.benq_projector
     - service: cover.close_cover
       target:
         entity_id: cover.snug_blind_cover
@@ -66,20 +66,17 @@ projector_off:
   alias: Projector Off
   mode: restart
   sequence:
-    # - service: switch.turn_off
-    #   target:
-    #     entity_id: switch.benq_projector
-    # - delay:
-    #     milliseconds: 30
-    # - service: switch.turn_off
-    #   target:
-    #     entity_id: switch.benq_projector
+    - service: switch.turn_off
+      target:
+        entity_id: switch.benq_projector
+    - delay:
+        milliseconds: 30
+    - service: switch.turn_off
+      target:
+        entity_id: switch.benq_projector
     - service: cover.open_cover
       target:
         entity_id: cover.snug_blind_cover
-    # - service: media_player.turn_off
-    #   target:
-    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
 
 snug_surround:
   alias: Surround Sound
@@ -102,18 +99,18 @@ snug_surround:
       target:
         entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
     - service: media_player.turn_on
-    #   target:
-    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
-    # - delay:
-    #     milliseconds: 30
-    # - service: media_player.select_source
-    #   data:
-    #     source: BD
-    #   target:
-    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
-    # - service: media_player.turn_on
-    #   target:
-    #     entity_id: media_player.snug
+      target:
+        entity_id: media_player.arcam_fmj_192_168_1_52_zone_1
+    - delay:
+        milliseconds: 30
+    - service: media_player.select_source
+      data:
+        source: BD
+      target:
+        entity_id: media_player.arcam_fmj_192_168_1_52_zone_1
+    - service: media_player.turn_on
+      target:
+        entity_id: media_player.snug
     # - service: media_player.select_source
     #   data:
     #     source: TV
@@ -134,7 +131,7 @@ snug_music:
       data:
         entity_id: input_text.snug_scene
         value: snug_music
-    # - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
+    - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
     # - service: media_player.select_source
     #   data:
     #     source: Roon
@@ -153,9 +150,9 @@ snug_music:
     #     entity_id: media_player.snug
     # - delay:
     #     seconds: 5
-    # - service: media_player.turn_off
-    #   target:
-    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
+    - service: media_player.turn_off
+      target:
+        entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
 
 snug_lp12:
   alias: LP12
@@ -180,9 +177,9 @@ snug_lp12:
     # - service: media_player.turn_off
     #   target:
     #     entity_id: media_player.samsung_the_frame_43
-    # - service: media_player.turn_off
-    #   target:
-    #     entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
+    - service: media_player.turn_off
+      target:
+        entity_id: media_player.arcam_fmj_192_168_1_52_zone_1_2
 
 snug_off:
   alias: Snug Off
@@ -197,14 +194,14 @@ snug_off:
     - service: switch.turn_off
       data:
         entity_id: switch.snug_hifi
-    # - service: media_player.turn_off
-    #   target:
-    #     entity_id: media_player.snug
-    # - delay:
-    #     seconds: 5
-    # - service: media_player.turn_off
-    #   target:
-    #     entity_id: media_player.samsung_the_frame_43
+    - service: media_player.turn_off
+      target:
+        entity_id: media_player.snug
+    - delay:
+        seconds: 5
+    - service: media_player.turn_off
+      target:
+        entity_id: media_player.samsung_the_frame_43
 
 # gone_out:
 #   alias: Gone Out
