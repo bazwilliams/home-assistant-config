@@ -69,14 +69,14 @@ projector_off:
     - service: switch.turn_off
       target:
         entity_id: switch.benq_projector
+    - service: cover.open_cover
+      target:
+        entity_id: cover.snug_blind_cover
     - delay:
         milliseconds: 30
     - service: switch.turn_off
       target:
         entity_id: switch.benq_projector
-    - service: cover.open_cover
-      target:
-        entity_id: cover.snug_blind_cover
 
 snug_surround:
   alias: Surround Sound
@@ -185,6 +185,10 @@ snug_off:
   alias: Snug Off
   mode: restart
   sequence:
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_chill
     - service: script.turn_on
       target:
         entity_id: script.projector_off
