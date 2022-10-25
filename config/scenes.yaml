@@ -901,7 +901,26 @@
       state: "off"
     light.movie_shelf_light:
       state: "off"
-
+- name: Snug Work
+  id: 497a1c67-add7-43e1-8b4d-a821c52e92fc
+  entities:
+    light.steampunk_lamp: off
+    light.snug_ceiling_strip_1:
+      state: "on"
+      brightness: 50
+      xy_color: [ 0.137, 0.065 ]
+    light.snug_ceiling_strip_2:
+      state: "on"
+      brightness: 59
+      xy_color: [ 0.137, 0.065 ]
+    light.snug_1:
+      state: "on"
+    light.snug_2:
+      state: "on"
+    light.snug_lava_lamp: off
+    light.gaming_shelf_light_3: off
+    light.snug_records_shelf: off
+    light.movie_shelf_light: off
 
 - name: Hallway Bright
   id: 7552d79a-9ae1-4865-8be9-b0bd90213dbf

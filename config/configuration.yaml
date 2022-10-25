@@ -35,6 +35,8 @@ input_text:
     name: ZHA Last Command - Kitchen Music Shortcut
   snug_music_shortcut_last_command:
     name: ZHA Last Command - Snug Music Shortcut
+  projector_shortcut_last_command:
+    name: ZHA Last Command - Projector Shortcut
   back_garden_scene:
     name: Back Garden Scene
   downstairs_hallway_scene:
@@ -63,6 +65,16 @@ input_boolean:
     name: Hallway should be bright
   snug_bfl:
     name: Snug should be bright
+
+input_select:
+  snug_preset:
+    options:
+      - snug_chill
+      - snug_work
+      - snug_gaming
+      - snug_music
+      - snug_movie
+      - snug_lp12
 
 switch:
   - platform: benq_projector
