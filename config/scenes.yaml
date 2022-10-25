@@ -558,15 +558,25 @@
   id: 399b1de5-87fa-496a-89b8-84454ec0c91d
   entities:
     light.hue_color_candle_3:
-      state: "off"
+      state: "on"
+      brightness: 25
+      color_temp: 246
     light.hue_color_candle_5:
-      state: "off"
+      state: "on"
+      brightness: 28
+      xy_color: [ 0.491, 0.415 ]
     light.hue_color_candle_6:
-      state: "off"
+      state: "on"
+      brightness: 25
+      color_temp: 156
     light.hue_color_candle_7:
-      state: "off"
+      state: "on"
+      brightness: 25
+      xy_color: [  0.259, 0.186 ]
     light.hue_color_candle_8:
-      state: "off"
+      state: "on"
+      brightness: 30
+      xy_color: [  0.267, 0.218 ]
 - name: Living Room Dull Outside
   id: f9edc4da-cd18-42e0-8e61-0ae8104ca658
   entities:
@@ -1189,3 +1199,52 @@
       state: "off"
     light.upstairs_spot_3:
       state: "off"
+
+- name: Bedroom Off
+  id: da836f1d-b36d-4d2f-a52b-c754373cd35a
+  entities:
+    light.bedroom_main:
+      state: "off"
+    light.hue_color_lamp_1:
+      state: "off"
+    light.hue_white_lamp_1:
+      state: "off"
+
+- name: Bedroom Mood
+  id: 6c8024e2-443f-4bd3-a32a-044cd0bcdb13
+  entities:
+    light.bedroom_main:
+      state: "off"
+    light.hue_color_lamp_1:
+      state: "on"
+      brightness: 100
+      xy_color: [0.586, 0.387]
+    light.hue_white_lamp_1:
+      state: "on"
+      brightness: 100
+
+- name: Bedroom Party
+  id: d6ad3da0-6dcf-4df6-a166-2587e4d6b338
+  entities:
+    light.bedroom_main:
+      state: "off"
+    light.hue_color_lamp_1:
+      state: "on"
+      brightness: 146
+      xy_color: [0.292, 0.116]
+    light.hue_white_lamp_1:
+      state: "on"
+      brightness: 146
+
+- name: Bedroom Bright
+  id: 158e2c84-cf6c-4188-bf1a-77e74ef6ab4c
+  entities:
+    light.bedroom_main:
+      state: "on"
+    light.hue_color_lamp_1:
+      state: "on"
+      color_temp: 153
+      brightness: 255
+    light.hue_white_lamp_1:
+      state: "on"
+      brightness: 255

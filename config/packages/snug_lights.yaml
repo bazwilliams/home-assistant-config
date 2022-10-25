@@ -30,7 +30,7 @@ automation:
               - service: scene.turn_on
                 data_template:
                   transition: 0.1
-                  entity_id: scene.{{ states('input_text.snug_scene') }}
+                  entity_id: scene.{{ states('input_select.snug_scene') }}
       action_button_off_short:
         - choose:
             - conditions:
@@ -104,13 +104,13 @@ automation:
   - service: scene.turn_on
     data_template:
       transition: 0.1
-      entity_id: "scene.{{ states('input_text.snug_scene') }}"
+      entity_id: "scene.{{ states('input_select.snug_scene') }}"
 
 - alias: Snug Lights - Scene Automation
   mode: single
   trigger:
     platform: state
-    entity_id: input_text.snug_scene
+    entity_id: input_select.snug_scene
   condition:
     - condition: state
       entity_id: input_boolean.snug_bfl
@@ -119,4 +119,4 @@ automation:
     - service: scene.turn_on
       data_template:
         transition: 1
-        entity_id: "scene.{{ states('input_text.snug_scene') }}"
+        entity_id: "scene.{{ states('input_select.snug_scene') }}"

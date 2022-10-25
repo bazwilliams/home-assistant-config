@@ -88,9 +88,9 @@ snug_surround:
     - service: switch.turn_on
       target:
         entity_id: switch.snug_hifi
-    - service: input_text.set_value
+    - service: input_select.select_option
       data:
-        entity_id: input_text.snug_scene
+        entity_id: input_select.snug_scene
         value: snug_movie
     - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
     - service: media_player.select_source
@@ -127,9 +127,9 @@ snug_music:
     - service: switch.turn_on
       target:
         entity_id: switch.snug_hifi
-    - service: input_text.set_value
+    - service: input_select.select_option
       data:
-        entity_id: input_text.snug_scene
+        entity_id: input_select.snug_scene
         value: snug_music
     - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
     # - service: media_player.select_source
@@ -164,9 +164,9 @@ snug_lp12:
     - service: switch.turn_on
       target:
         entity_id: switch.snug_hifi
-    - service: input_text.set_value
+    - service: input_select.select_option
       data:
-        entity_id: input_text.snug_scene
+        entity_id: input_select.snug_scene
         value: snug_lp12
     - wait_template: "{{ states('media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f') != 'unavailable' }}"
     - service: media_player.select_source
@@ -185,9 +185,9 @@ snug_off:
   alias: Snug Off
   mode: restart
   sequence:
-    - service: input_text.set_value
+    - service: input_select.select_option
       data:
-        entity_id: input_text.snug_scene
+        entity_id: input_select.snug_scene
         value: snug_chill
     - service: script.turn_on
       target:

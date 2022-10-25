@@ -31,6 +31,8 @@ input_text:
     name: ZHA Last Command - Living Room Dimmer
   snug_dimmer_last_command:
     name: ZHA Last Command - Snug Dimmer
+  bedroom_dimmer_last_command:
+    name: ZHA Last Command - Bedroom Dimmer
   kitchen_music_shortcut_last_command:
     name: ZHA Last Command - Kitchen Music Shortcut
   snug_music_shortcut_last_command:
@@ -53,8 +55,8 @@ input_text:
     name: Staircase Scene
   upstairs_hallway_scene:
     name: Upstairs Hallway Scene
-  snug_scene:
-    name: Snug Scene
+  bedroom_scene:
+    name: Bedroom Scene
 
 input_boolean:
   kitchen_bfl:
@@ -67,7 +69,7 @@ input_boolean:
     name: Snug should be bright
 
 input_select:
-  snug_preset:
+  snug_scene:
     options:
       - snug_chill
       - snug_work
@@ -103,9 +105,18 @@ light:
       - light.steampunk_lamp
       - light.snug_ceiling_strip_1
       - light.snug_ceiling_strip_2
+  - platform: group
+    name: Bedroom Lights
+    entities:
+      - light.copper_lamp
+      - light.mushroom_light
+      - light.bedroom_main
   - platform: switch
     name: Snug Lava Lamp
     entity_id: switch.lava_lamp
   - platform: switch
     name: Snug Records Shelf
     entity_id: switch.records_light_switch
+  - platform: switch
+    name: Bedroom Main
+    entity_id: switch.bedroom_main_switch
