@@ -1593,27 +1593,19 @@
       state: 'off'
     light.upstairs_spot_3:
       state: 'off'
-- name: Bedroom Off
-  id: da836f1d-b36d-4d2f-a52b-c754373cd35a
-  entities:
-    light.bedroom_main:
-      state: 'off'
-    light.hue_color_lamp_1:
-      state: 'off'
-    light.hue_white_lamp_1:
-      state: 'off'
+
 - name: Bedroom Mood
   id: 6c8024e2-443f-4bd3-a32a-044cd0bcdb13
   entities:
     light.bedroom_main:
       state: 'off'
-    light.hue_color_lamp_1:
+    light.copper_lamp:
       state: 'on'
       brightness: 100
       xy_color:
       - 0.586
       - 0.387
-    light.hue_white_lamp_1:
+    light.mushroom_light:
       state: 'on'
       brightness: 100
 - name: Bedroom Party
@@ -1621,13 +1613,13 @@
   entities:
     light.bedroom_main:
       state: 'off'
-    light.hue_color_lamp_1:
+    light.copper_lamp:
       state: 'on'
       brightness: 146
       xy_color:
       - 0.292
       - 0.116
-    light.hue_white_lamp_1:
+    light.mushroom_light:
       state: 'on'
       brightness: 146
 - name: Bedroom Bright
@@ -1635,10 +1627,10 @@
   entities:
     light.bedroom_main:
       state: 'on'
-    light.hue_color_lamp_1:
+    light.copper_lamp:
       state: 'on'
       color_temp: 153
       brightness: 255
-    light.hue_white_lamp_1:
+    light.mushroom_light:
       state: 'on'
       brightness: 255

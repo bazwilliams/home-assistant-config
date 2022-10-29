@@ -1,86 +1,50 @@
 automation:
-# - alias: Bedroom Lights - Dimmer
-#   description: ''
-#   use_blueprint:
-#     path: EPMatt/philips_324131092621.yaml
-#     input:
-#       integration: ZHA
-#       controller_device: 
-#       helper_last_controller_event: input_text.bedroom_dimmer_last_command
-#       action_button_off_short:
-#         - service: input_text.set_value
-#           data:
-#             entity_id: input_text.bedroom_scene
-#             value: bedroom_off
-#         - service: light.turn_off
-#           target:
-#             area_id: bedroom
-#       action_button_on_short:
-#       - choose:
-#           - conditions:
-#               - condition: or
-#                 conditions:
-#                   - condition: state
-#                     entity_id: input_text.bedroom_scene
-#                     state: bedroom_off
-#                   - condition: state
-#                     entity_id: input_text.bedroom_scene
-#                     state: bedroom_bright
-#             sequence:
-#               - service: input_text.set_value
-#                 data:
-#                   entity_id: input_text.bedroom_scene
-#                   value: bedroom_mood
-#           - conditions:
-#             - condition: state
-#               entity_id: input_text.bedroom_scene
-#               state: bedroom_mood
-#             sequence:
-#               - service: input_text.set_value
-#                 data:
-#                   entity_id: input_text.bedroom_scene
-#                   value: bedroom_party
-#           - conditions:
-#             - condition: state
-#               entity_id: input_text.bedroom_scene
-#               state: bedroom_party
-#             sequence:
-#               - service: input_text.set_value
-#                 data:
-#                   entity_id: input_text.bedroom_scene
-#                   value: bedroom_bright
-#       action_button_up_short:
-#         - service: light.turn_on
-#           target:
-#             area_id: bedroom
-#           data:
-#             brightness_step: 50
-#       action_button_down_short:
-#         - service: light.turn_on
-#           target:
-#             area_id: bedroom
-#           data:
-#             brightness_step: -50
-#       action_button_up_long:
-#         - service: light.turn_on
-#           target:
-#             area_id: bedroom
-#           data:
-#             brightness_step: 25
-#       action_button_down_long:
-#         - service: light.turn_on
-#           target:
-#             area_id: bedroom
-#           data:
-#             brightness_step: -25
-  
-- alias: Bedroom Default Scene Changed
-  mode: single
-  trigger:
-    platform: state
-    entity_id: input_text.bedroom_scene
-  action:
-    - service: scene.turn_on
-      data_template:
-        transition: 0.5
-        entity_id: "scene.{{ states('input_text.bedroom_scene') }}"
+- alias: Bedroom Lights - Dimmer
+  description: ""
+  use_blueprint:
+    path: EPMatt/philips_324131092621.yaml
+    input:
+      integration: ZHA
+      controller_device: 3ac3f4891e52a5c0599c4279bff5e860
+      helper_last_controller_event: input_text.bedroom_dimmer_last_command
+      action_button_on_short:
+        - service: input_select.select_next
+          target:
+            entity_id: input_select.bedroom_scene
+        - service: scene.turn_on
+          data_template:
+            transition: 0.1
+            entity_id: scene.{{ states('input_select.bedroom_scene') }}
+      action_button_off_short:
+        - service: input_select.select_first
+          target:
+            entity_id: input_select.bedroom_scene
+        - service: light.turn_off
+          target:
+            entity_id: light.bedroom_lights
+      action_button_up_short:
+        - service: light.turn_on
+          target:
+            area_id: bedroom
+          data:
+            brightness_step: 50
+      action_button_down_short:
+        - service: light.turn_on
+          target:
+            area_id: bedroom
+          data:
+            brightness_step: -50
+      action_button_up_long:
+        - service: light.turn_on
+          target:
+            area_id: bedroom
+          data:
+            brightness_step: 25
+      action_button_down_long:
+        - service: light.turn_on
+          target:
+            area_id: bedroom
+          data:
+            brightness_step: -25
+      button_up_long_loop: true
+      button_down_long_loop: true

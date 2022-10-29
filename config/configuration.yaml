@@ -77,6 +77,12 @@ input_select:
       - snug_music
       - snug_movie
       - snug_lp12
+  bedroom_scene:
+    options:
+      - bedroom_off
+      - bedroom_mood
+      - bedroom_party
+      - bedroom_bright
 
 switch:
   - platform: benq_projector
