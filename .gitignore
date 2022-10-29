@@ -1,1 +1,15 @@
 venv
+config/.cloud
+config/.storage
+config/blueprints
+config/tts
+config/custom_components/
+!config/custom_components/benq_projector
+!config/blueprints/automation/bazwilliams/*
+__pycache__
+.HA_VERSION
+automations.yaml
+home-assistant_v2.db*
+home-assistant.log*
+secrets.yaml
+zigbee.db*

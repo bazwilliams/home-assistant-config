@@ -1,1250 +1,1644 @@
-
 - name: Downstairs Hallway Off
   id: d9ae0bbc-8e67-4945-8070-44e541f9aed4
   entities:
     light.downstairs_hallway_1:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_2:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_3:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_4:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_5:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_6:
-      state: "off"
+      state: 'off'
 - name: Downstairs Hallway Evening
   id: 62cbe636-b8c0-405d-8991-a5c749ef4e5e
   entities:
     light.downstairs_hallway_1:
-      state: "on"
+      state: 'on'
       brightness: 114
       xy_color:
-        - 0.202
-        - 0.434
+      - 0.202
+      - 0.434
     light.downstairs_hallway_2:
-      state: "on"
+      state: 'on'
       brightness: 115
       xy_color:
-        - 0.191
-        - 0.11
+      - 0.191
+      - 0.11
     light.downstairs_hallway_3:
-      state: "on"
+      state: 'on'
       brightness: 134
       xy_color:
-        - 0.255
-        - 0.137
+      - 0.255
+      - 0.137
     light.downstairs_hallway_4:
-      state: "on"
+      state: 'on'
       brightness: 123
       xy_color:
-        - 0.17
-        - 0.249
+      - 0.17
+      - 0.249
     light.downstairs_hallway_5:
-      state: "on"
+      state: 'on'
       brightness: 149
       xy_color:
-        - 0.171
-        - 0.2
+      - 0.171
+      - 0.2
     light.downstairs_hallway_6:
-      state: "on"
+      state: 'on'
       brightness: 147
       xy_color:
-        - 0.282
-        - 0.12
+      - 0.282
+      - 0.12
 - name: Downstairs Hallway Evening Away
   id: a3327617-6798-4784-8cc5-a5c0a048069e
   entities:
     light.downstairs_hallway_1:
-      state: "on"
+      state: 'on'
       brightness: 41
       xy_color:
-        - 0.202
-        - 0.434
+      - 0.202
+      - 0.434
     light.downstairs_hallway_2:
-      state: "on"
+      state: 'on'
       brightness: 45
       xy_color:
-        - 0.191
-        - 0.11
-    light.downstairs_hallway_3: off
+      - 0.191
+      - 0.11
+    light.downstairs_hallway_3: false
     light.downstairs_hallway_4:
-      state: "on"
+      state: 'on'
       brightness: 56
       xy_color:
-        - 0.17
-        - 0.249
-    light.downstairs_hallway_5: off
-    light.downstairs_hallway_6: off
+      - 0.17
+      - 0.249
+    light.downstairs_hallway_5: false
+    light.downstairs_hallway_6: false
 - name: Downstairs Hallway Dull Outside
   id: 96470f45-d459-4340-9400-dcb13f605c2a
   entities:
     light.downstairs_hallway_1:
-      state: "on"
+      state: 'on'
       brightness: 106
-
       xy_color:
-        - 0.359
-        - 0.269
+      - 0.359
+      - 0.269
     light.downstairs_hallway_2:
-      state: "on"
+      state: 'on'
       brightness: 51
       xy_color:
-        - 0.42
-        - 0.409
+      - 0.42
+      - 0.409
     light.downstairs_hallway_3:
-      state: "on"
+      state: 'on'
       brightness: 121
       xy_color:
-        - 0.258
-        - 0.142
+      - 0.258
+      - 0.142
     light.downstairs_hallway_4:
-      state: "on"
+      state: 'on'
       brightness: 114
       xy_color:
-        - 0.193
-        - 0.269
+      - 0.193
+      - 0.269
     light.downstairs_hallway_5:
-      state: "on"
+      state: 'on'
       brightness: 95
       xy_color:
-        - 0.325
-        - 0.319
+      - 0.325
+      - 0.319
     light.downstairs_hallway_6:
-      state: "on"
+      state: 'on'
       brightness: 111
       xy_color:
-        - 0.34
-        - 0.274
+      - 0.34
+      - 0.274
 - name: Downstairs Hallway Daytime Home
   id: 06ab8391-62e0-4f6f-82ca-86de56e96a25
   entities:
     light.downstairs_hallway_1:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_2:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_3:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_4:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_5:
-      state: "on"
+      state: 'on'
       brightness: 28
       xy_color:
-        - 0.314
-        - 0.331
+      - 0.314
+      - 0.331
     light.downstairs_hallway_6:
-      state: "on"
+      state: 'on'
       brightness: 54
       xy_color:
-        - 0.314
-        - 0.331
+      - 0.314
+      - 0.331
 - name: Downstairs Hallway Early Night
   id: 52815e98-06b4-487a-ad2b-372676c04af3
   entities:
     light.downstairs_hallway_1:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_2:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_3:
-      state: "on"
+      state: 'on'
       brightness: 29
       xy_color:
-        - 0.169
-        - 0.371
+      - 0.169
+      - 0.371
     light.downstairs_hallway_4:
-      state: "on"
+      state: 'on'
       brightness: 29
       xy_color:
-        - 0.3
-        - 0.12
+      - 0.3
+      - 0.12
     light.downstairs_hallway_5:
-      state: "off"
+      state: 'off'
     light.downstairs_hallway_6:
-      state: "on"
+      state: 'on'
       brightness: 29
       xy_color:
-        - 0.464
-        - 0.277
+      - 0.464
+      - 0.277
 - name: Downstairs Hallway Late Evening
   id: 8cef2e85-d418-4010-b713-176c467fa0e7
   entities:
     light.downstairs_hallway_1:
-      state: "on"
+      state: 'on'
       brightness: 44
       xy_color:
-        - 0.165
-        - 0.479
+      - 0.165
+      - 0.479
     light.downstairs_hallway_2:
-      state: "on"
+      state: 'on'
       brightness: 39
       xy_color:
-        - 0.434
-        - 0.185
+      - 0.434
+      - 0.185
     light.downstairs_hallway_3:
-      state: "on"
+      state: 'on'
       brightness: 32
       xy_color:
-        - 0.205
-        - 0.074
+      - 0.205
+      - 0.074
     light.downstairs_hallway_4:
-      state: "on"
+      state: 'on'
       brightness: 32
       xy_color:
-        - 0.158
-        - 0.198
+      - 0.158
+      - 0.198
     light.downstairs_hallway_5:
-      state: "on"
+      state: 'on'
       brightness: 31
       xy_color:
-        - 0.509
-        - 0.36
+      - 0.509
+      - 0.36
     light.downstairs_hallway_6:
-      state: "on"
+      state: 'on'
       brightness: 38
       xy_color:
-        - 0.579
-        - 0.256
+      - 0.579
+      - 0.256
 - name: Downstairs Hallway Late Evening Away
   id: 7c4eaabc-611f-4ede-96cf-85794eb318a7
   entities:
     light.downstairs_hallway_2:
-      state: "on"
+      state: 'on'
       brightness: 39
       xy_color:
-        - 0.434
-        - 0.185
+      - 0.434
+      - 0.185
     light.downstairs_hallway_3:
-      state: "on"
+      state: 'on'
       brightness: 32
       xy_color:
-        - 0.205
-        - 0.074
-    light.downstairs_hallway_4: off
-    light.downstairs_hallway_5: off
-    light.downstairs_hallway_6: off
+      - 0.205
+      - 0.074
+    light.downstairs_hallway_4: false
+    light.downstairs_hallway_5: false
+    light.downstairs_hallway_6: false
 - name: Downstairs Hallway Morning
   id: 4aa19e3f-9d52-4b45-a340-75015972b5d2
   entities:
     light.downstairs_hallway_1:
-      state: "on"
+      state: 'on'
       brightness: 247
       xy_color:
-        - 0.173
-        - 0.175
+      - 0.173
+      - 0.175
     light.downstairs_hallway_2:
-      state: "on"
+      state: 'on'
       brightness: 148
       xy_color:
-        - 0.314
-        - 0.331
+      - 0.314
+      - 0.331
     light.downstairs_hallway_3:
-      state: "on"
+      state: 'on'
       brightness: 173
       xy_color:
-        - 0.526
-        - 0.411
+      - 0.526
+      - 0.411
     light.downstairs_hallway_4:
-      state: "on"
+      state: 'on'
       brightness: 255
       xy_color:
-        - 0.583
-        - 0.389
+      - 0.583
+      - 0.389
     light.downstairs_hallway_5:
-      state: "on"
+      state: 'on'
       brightness: 69
       xy_color:
-        - 0.464
-        - 0.411
+      - 0.464
+      - 0.411
     light.downstairs_hallway_6:
-      state: "on"
+      state: 'on'
       brightness: 183
       xy_color:
-        - 0.526
-        - 0.411
+      - 0.526
+      - 0.411
 - name: Downstairs Hallway Morning Away
   id: 981df073-b53d-4add-991c-451a3cc22304
   entities:
     light.downstairs_hallway_1:
-      state: "on"
+      state: 'on'
       brightness: 247
       xy_color:
-        - 0.173
-        - 0.175
+      - 0.173
+      - 0.175
     light.downstairs_hallway_2:
-      state: "on"
+      state: 'on'
       brightness: 148
       xy_color:
-        - 0.314
-        - 0.331
+      - 0.314
+      - 0.331
     light.downstairs_hallway_3:
-      state: "on"
+      state: 'on'
       brightness: 173
       xy_color:
-        - 0.526
-        - 0.411
-    light.downstairs_hallway_4: off
-    light.downstairs_hallway_5: off
-    light.downstairs_hallway_6: off
+      - 0.526
+      - 0.411
+    light.downstairs_hallway_4: false
+    light.downstairs_hallway_5: false
+    light.downstairs_hallway_6: false
 - name: Kitchen Off
   id: a215e4f4-4975-441a-ab2d-307e9f9a3123
   entities:
-    light.worktop_left_light_4: off
-    light.worktop_right_light_2: off
-    light.worktop_tumble_dryer_light_3: off
-    light.dining_table_light: off
-    light.kitchen_main: off
-    light.kitchen_under_cupboards: off
-    light.kitchen_under_tall_cupboards: off
+    light.worktop_left_light_4: false
+    light.worktop_right_light_2: false
+    light.worktop_tumble_dryer_light_3: false
+    light.dining_table_light: false
+    light.kitchen_main: false
+    light.kitchen_under_cupboards: false
+    light.kitchen_under_tall_cupboards: false
 - name: Kitchen Night
   id: 5eb34708-1fff-417f-9f61-8dfc512e1563
   entities:
     light.worktop_left_light_4:
-      state: "on"
+      state: 'on'
       brightness: 20
     light.worktop_right_light_2:
-      state: "on"
+      state: 'on'
       brightness: 20
     light.worktop_tumble_dryer_light_3:
-      state: "on"
+      state: 'on'
       brightness: 20
-    light.dining_table_light: off
-    light.kitchen_main: off
+    light.dining_table_light: false
+    light.kitchen_main: false
     light.kitchen_under_cupboards:
-      state: "on"
-      xy_color: [ 0.547, 0.353 ]
+      state: 'on'
+      xy_color:
+      - 0.547
+      - 0.353
       brightness: 44
     light.kitchen_under_tall_cupboards:
-      state: "on"
-      xy_color: [ 0.547, 0.353 ]
+      state: 'on'
+      xy_color:
+      - 0.547
+      - 0.353
       brightness: 44
 - name: Kitchen Late Night
   id: ace3798c-0e4e-4283-965c-4da01226d0e5
   entities:
     light.worktop_left_light_4:
-      state: "on"
+      state: 'on'
       brightness: 50
     light.worktop_right_light_2:
-      state: "on"
+      state: 'on'
       brightness: 50
     light.worktop_tumble_dryer_light_3:
-      state: "on"
+      state: 'on'
       brightness: 50
-    light.dining_table_light: off
+    light.dining_table_light: false
     light.kitchen_main:
-      state: "on"
-      xy_color: [ 0.653, 0.306 ]
+      state: 'on'
+      xy_color:
+      - 0.653
+      - 0.306
       brightness: 37
     light.kitchen_under_cupboards:
-      state: "on"
-      xy_color: [ 0.523, 0.411 ]
+      state: 'on'
+      xy_color:
+      - 0.523
+      - 0.411
       brightness: 37
     light.kitchen_under_tall_cupboards:
-      state: "on"
-      xy_color: [ 0.523, 0.411 ]
+      state: 'on'
+      xy_color:
+      - 0.523
+      - 0.411
       brightness: 37
 - name: Kitchen Early Night
   id: 524930f7-ba59-4312-8113-82586e5ae1b5
   entities:
     light.worktop_left_light_4:
-      state: "on"
+      state: 'on'
       brightness: 100
     light.worktop_right_light_2:
-      state: "on"
+      state: 'on'
       brightness: 100
     light.worktop_tumble_dryer_light_3:
-      state: "on"
+      state: 'on'
       brightness: 100
     light.dining_table_light:
-      state: "on"
+      state: 'on'
       brightness: 76
     light.kitchen_main:
-      state: "on"
-      xy_color: [ 0.653, 0.306 ]
+      state: 'on'
+      xy_color:
+      - 0.653
+      - 0.306
       brightness: 37
     light.kitchen_under_cupboards:
-      state: "on"
-      xy_color: [ 0.523, 0.411 ]
+      state: 'on'
+      xy_color:
+      - 0.523
+      - 0.411
       brightness: 37
     light.kitchen_under_tall_cupboards:
-      state: "on"
-      xy_color: [ 0.523, 0.411 ]
+      state: 'on'
+      xy_color:
+      - 0.523
+      - 0.411
       brightness: 37
 - name: Kitchen Evening
   id: 5888adc1-53ae-4c2f-8309-0cb5bf45ad91
   entities:
     light.worktop_left_light_4:
-      state: "on"
+      state: 'on'
       brightness: 150
     light.worktop_right_light_2:
-      state: "on"
+      state: 'on'
       brightness: 150
     light.worktop_tumble_dryer_light_3:
-      state: "on"
+      state: 'on'
       brightness: 150
     light.dining_table_light:
-      state: "on"
+      state: 'on'
       brightness: 120
     light.kitchen_main:
-      state: "on"
-      xy_color: [ 0.301, 0.145 ]
+      state: 'on'
+      xy_color:
+      - 0.301
+      - 0.145
       brightness: 25
     light.kitchen_under_cupboards:
-      state: "on"
-      xy_color: [ 0.299, 0.144 ]
+      state: 'on'
+      xy_color:
+      - 0.299
+      - 0.144
       brightness: 71
     light.kitchen_under_tall_cupboards:
-      state: "on"
-      xy_color: [ 0.299, 0.144 ]
+      state: 'on'
+      xy_color:
+      - 0.299
+      - 0.144
       brightness: 71
 - name: Kitchen Daytime
   id: 8a025d5c-28df-4e4a-9e8c-89681fedf54d
   entities:
     light.worktop_left_light_4:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.worktop_right_light_2:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.worktop_tumble_dryer_light_3:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.dining_table_light:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.kitchen_main:
-      state: "on"
-      xy_color: [ 0.158, 0.094 ]
+      state: 'on'
+      xy_color:
+      - 0.158
+      - 0.094
       brightness: 119
     light.kitchen_under_cupboards:
-      state: "on"
-      xy_color: [ 0.314, 0.331 ]
+      state: 'on'
+      xy_color:
+      - 0.314
+      - 0.331
       brightness: 60
     light.kitchen_under_tall_cupboards:
-      state: "on"
-      xy_color: [ 0.314, 0.331 ]
+      state: 'on'
+      xy_color:
+      - 0.314
+      - 0.331
       brightness: 60
 - name: Kitchen Morning
   id: dd9cf914-1493-4f4b-a660-dfd6c369d5ab
   entities:
     light.worktop_left_light_4:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.worktop_right_light_2:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.worktop_tumble_dryer_light_3:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.dining_table_light:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.kitchen_main:
-      state: "on"
-      xy_color: [ 0.526, 0.411 ]
+      state: 'on'
+      xy_color:
+      - 0.526
+      - 0.411
       brightness: 114
     light.kitchen_under_cupboards:
-      state: "on"
-      xy_color: [ 0.526, 0.411 ]
+      state: 'on'
+      xy_color:
+      - 0.526
+      - 0.411
       brightness: 114
     light.kitchen_under_tall_cupboards:
-      state: "on"
-      xy_color: [ 0.526, 0.411 ]
+      state: 'on'
+      xy_color:
+      - 0.526
+      - 0.411
       brightness: 114
 - name: Kitchen Bright
   id: 438ce466-eb0a-424d-99ed-cd2712ce52d9
   entities:
     light.worktop_left_light_4:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.worktop_right_light_2:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.worktop_tumble_dryer_light_3:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.dining_table_light:
-      state: "on"
+      state: 'on'
       brightness: 255
     light.kitchen_main:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 156
     light.kitchen_under_cupboards:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 156
     light.kitchen_under_tall_cupboards:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 156
 - name: Living Room Off
   id: ce0a10dd-6477-4fea-882e-755b0938d799
   entities:
     light.hue_color_candle_3:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_5:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_6:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_7:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_8:
-      state: "off"
+      state: 'off'
 - name: Living Room Off TV
   id: f8df4c88-5fcf-4dbd-aea1-ca18620d55c8
   entities:
     light.hue_color_candle_3:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_5:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_6:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_7:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_8:
-      state: "off"
+      state: 'off'
 - name: Living Room Bright
   id: 79aa1c13-07fc-4d9c-9174-efa057744552
   entities:
     light.hue_color_candle_3:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 156
     light.hue_color_candle_5:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 156
     light.hue_color_candle_6:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 156
     light.hue_color_candle_7:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 156
     light.hue_color_candle_8:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 156
-- name: Living Room Morning TV
-  id: 968cedb4-5b96-440a-a634-65996a9795d4
+- id: 968cedb4-5b96-440a-a634-65996a9795d4
+  name: Living Room Morning TV
   entities:
     light.hue_color_candle_3:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 3
+      supported_features: 40
+      state: 'off'
     light.hue_color_candle_5:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 5
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 117
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      state: 'on'
     light.hue_color_candle_6:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 6
+      supported_features: 40
+      state: 'off'
     light.hue_color_candle_7:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 7
+      supported_features: 40
+      color_mode: xy
+      brightness: 38
+      hs_color:
+      - 26.725
+      - 89.804
+      rgb_color:
+      - 255
+      - 128
+      - 26
+      xy_color:
+      - 0.6091
+      - 0.3702
+      state: 'on'
     light.hue_color_candle_8:
-      state: "off"
-- name: Living Room Morning
-  id: cd90a012-16e8-4be2-858c-f767f45c91c5
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 8
+      supported_features: 40
+      state: 'off'
+  metadata: {}
+- id: cd90a012-16e8-4be2-858c-f767f45c91c5
+  name: Living Room Morning
   entities:
     light.hue_color_candle_3:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 1
+      hs_color:
+      - 255.059
+      - 100
+      rgb_color:
+      - 64
+      - 0
+      - 255
+      xy_color:
+      - 0.1532
+      - 0.0475
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 3
+      supported_features: 40
+      state: 'on'
     light.hue_color_candle_5:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 64
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 5
+      supported_features: 40
+      state: 'on'
     light.hue_color_candle_6:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 56
+      color_temp: 265
+      hs_color:
+      - 26.943
+      - 39.144
+      rgb_color:
+      - 255
+      - 200
+      - 155
+      xy_color:
+      - 0.434
+      - 0.369
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 6
+      supported_features: 40
+      state: 'on'
     light.hue_color_candle_7:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 41
+      hs_color:
+      - 26.725
+      - 89.804
+      rgb_color:
+      - 255
+      - 128
+      - 26
+      xy_color:
+      - 0.6091
+      - 0.3702
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 7
+      supported_features: 40
+      state: 'on'
     light.hue_color_candle_8:
-      state: "off"
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 92
+      color_temp: 410
+      hs_color:
+      - 29.04
+      - 74.777
+      rgb_color:
+      - 255
+      - 156
+      - 64
+      xy_color:
+      - 0.554
+      - 0.389
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 8
+      supported_features: 40
+      state: 'on'
+  metadata: {}
 - name: Living Room Dull Outside TV
   id: 399b1de5-87fa-496a-89b8-84454ec0c91d
   entities:
     light.hue_color_candle_3:
-      state: "on"
+      state: 'on'
       brightness: 25
       color_temp: 246
     light.hue_color_candle_5:
-      state: "on"
+      state: 'on'
       brightness: 28
-      xy_color: [ 0.491, 0.415 ]
+      xy_color:
+      - 0.491
+      - 0.415
     light.hue_color_candle_6:
-      state: "on"
+      state: 'on'
       brightness: 25
       color_temp: 156
     light.hue_color_candle_7:
-      state: "on"
+      state: 'on'
       brightness: 25
-      xy_color: [  0.259, 0.186 ]
+      xy_color:
+      - 0.259
+      - 0.186
     light.hue_color_candle_8:
-      state: "on"
+      state: 'on'
       brightness: 30
-      xy_color: [  0.267, 0.218 ]
+      xy_color:
+      - 0.267
+      - 0.218
 - name: Living Room Dull Outside
   id: f9edc4da-cd18-42e0-8e61-0ae8104ca658
   entities:
     light.hue_color_candle_3:
-      state: "on"
+      state: 'on'
       brightness: 25
       color_temp: 246
     light.hue_color_candle_5:
-      state: "on"
+      state: 'on'
       brightness: 28
-      xy_color: [ 0.491, 0.415 ]
+      xy_color:
+      - 0.491
+      - 0.415
     light.hue_color_candle_6:
-      state: "on"
+      state: 'on'
       brightness: 25
       color_temp: 156
     light.hue_color_candle_7:
-      state: "on"
+      state: 'on'
       brightness: 25
-      xy_color: [  0.259, 0.186 ]
+      xy_color:
+      - 0.259
+      - 0.186
     light.hue_color_candle_8:
-      state: "on"
+      state: 'on'
       brightness: 30
-      xy_color: [  0.267, 0.218 ]
+      xy_color:
+      - 0.267
+      - 0.218
 - name: Living Room Evening Away
   id: e77de594-f114-45a3-9f10-bfaecfb64630
   entities:
     light.hue_color_candle_3:
-      state: "on"
+      state: 'on'
       brightness: 50
-      xy_color: [ 0.158, 0.182 ]
+      xy_color:
+      - 0.158
+      - 0.182
     light.hue_color_candle_5:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_6:
-      state: "on"
+      state: 'on'
       brightness: 50
-      xy_color: [ 0.181, 0.434 ]
+      xy_color:
+      - 0.181
+      - 0.434
     light.hue_color_candle_7:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_8:
-      state: "off"
+      state: 'off'
 - name: Living Room Evening TV
   id: c36ec040-647d-4d8b-b4df-3deb9423a732
   entities:
     light.hue_color_candle_3:
-      state: "on"
+      state: 'on'
       brightness: 20
-      xy_color: [ 0.158, 0.182 ]
+      xy_color:
+      - 0.158
+      - 0.182
     light.hue_color_candle_5:
-      state: "on"
+      state: 'on'
       brightness: 20
-      xy_color: [ 0.278, 0.138 ]
+      xy_color:
+      - 0.278
+      - 0.138
     light.hue_color_candle_6:
-      state: "on"
+      state: 'on'
       brightness: 20
-      xy_color: [ 0.181, 0.434 ]
+      xy_color:
+      - 0.181
+      - 0.434
     light.hue_color_candle_7:
-      state: "on"
+      state: 'on'
       brightness: 20
-      xy_color: [ 0.357, 0.261 ]
+      xy_color:
+      - 0.357
+      - 0.261
     light.hue_color_candle_8:
-      state: "on"
+      state: 'on'
       brightness: 20
-      xy_color: [ 0.429, 0.192 ]
+      xy_color:
+      - 0.429
+      - 0.192
 - name: Living Room Evening
   id: 6b3b9400-6d78-42a6-8778-eca1cd72e9fc
   entities:
     light.hue_color_candle_3:
-      state: "on"
+      state: 'on'
       brightness: 99
-      xy_color: [ 0.158, 0.182 ]
+      xy_color:
+      - 0.158
+      - 0.182
     light.hue_color_candle_5:
-      state: "on"
+      state: 'on'
       brightness: 99
-      xy_color: [ 0.278, 0.138 ]
+      xy_color:
+      - 0.278
+      - 0.138
     light.hue_color_candle_6:
-      state: "on"
+      state: 'on'
       brightness: 99
-      xy_color: [ 0.181, 0.434 ]
+      xy_color:
+      - 0.181
+      - 0.434
     light.hue_color_candle_7:
-      state: "on"
+      state: 'on'
       brightness: 99
-      xy_color: [ 0.357, 0.261 ]
+      xy_color:
+      - 0.357
+      - 0.261
     light.hue_color_candle_8:
-      state: "on"
+      state: 'on'
       brightness: 99
-      xy_color: [ 0.429, 0.192 ]
+      xy_color:
+      - 0.429
+      - 0.192
 - name: Living Room Late Evening TV
   id: 699be2d5-67d8-443c-b764-9e17f7111bf9
   entities:
     light.hue_color_candle_3:
-      state: "on"
+      state: 'on'
       brightness: 5
-      xy_color: [ 0.571, 0.345 ]
+      xy_color:
+      - 0.571
+      - 0.345
     light.hue_color_candle_5:
-      state: "on"
+      state: 'on'
       brightness: 5
-      xy_color: [ 0.571, 0.345 ]
+      xy_color:
+      - 0.571
+      - 0.345
     light.hue_color_candle_6:
-      state: "on"
+      state: 'on'
       brightness: 5
-      xy_color: [ 0.429, 0.188 ]
+      xy_color:
+      - 0.429
+      - 0.188
     light.hue_color_candle_7:
-      state: "on"
+      state: 'on'
       brightness: 5
-      xy_color: [ 0.504, 0.389 ]
+      xy_color:
+      - 0.504
+      - 0.389
     light.hue_color_candle_8:
-      state: "on"
+      state: 'on'
       brightness: 5
-      xy_color: [ 0.546, 0.341 ]
+      xy_color:
+      - 0.546
+      - 0.341
 - name: Living Room Late Evening
   id: 77562df5-06fb-47f8-90ea-93800b71d705
   entities:
     light.hue_color_candle_3:
-      state: "on"
+      state: 'on'
       brightness: 50
-      xy_color: [ 0.571, 0.345 ]
+      xy_color:
+      - 0.571
+      - 0.345
     light.hue_color_candle_5:
-      state: "on"
+      state: 'on'
       brightness: 50
-      xy_color: [ 0.571, 0.345 ]
+      xy_color:
+      - 0.571
+      - 0.345
     light.hue_color_candle_6:
-      state: "on"
+      state: 'on'
       brightness: 50
-      xy_color: [ 0.429, 0.188 ]
+      xy_color:
+      - 0.429
+      - 0.188
     light.hue_color_candle_7:
-      state: "on"
+      state: 'on'
       brightness: 50
-      xy_color: [ 0.504, 0.389 ]
+      xy_color:
+      - 0.504
+      - 0.389
     light.hue_color_candle_8:
-      state: "on"
+      state: 'on'
       brightness: 50
-      xy_color: [ 0.546, 0.341 ]
+      xy_color:
+      - 0.546
+      - 0.341
 - name: Living Room Late Evening Away
   id: d693ee67-4fc4-4f21-9fd4-76f87cbc4908
   entities:
     light.hue_color_candle_3:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_5:
-      state: "on"
+      state: 'on'
       brightness: 20
-      xy_color: [ 0.571, 0.345 ]
+      xy_color:
+      - 0.571
+      - 0.345
     light.hue_color_candle_6:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_7:
-      state: "off"
+      state: 'off'
     light.hue_color_candle_8:
-      state: "off"
+      state: 'off'
 - name: Snug Off
   id: 3e86d181-d305-4a57-9114-36c04c84a448
   entities:
-    light.steampunk_lamp: off
-    light.snug_1: off
-    light.snug_2: off
-    light.snug_ceiling_strip_1: off
-    light.snug_ceiling_strip_2: off
-    light.snug_lava_lamp: off
-    light.gaming_shelf_light_3: off
-    light.snug_records_shelf: off
-    light.movie_shelf_light: off
+    light.steampunk_lamp: false
+    light.snug_1: false
+    light.snug_2: false
+    light.snug_ceiling_strip_1: false
+    light.snug_ceiling_strip_2: false
+    light.snug_lava_lamp: false
+    light.gaming_shelf_light_3: false
+    light.snug_records_shelf: false
+    light.movie_shelf_light: false
 - name: Snug Movie
   id: c4a737db-3a44-4130-8fa1-9dc0c8147d4a
   entities:
-    light.steampunk_lamp: off
-    light.snug_1: off
-    light.snug_2: off
+    light.steampunk_lamp: false
+    light.snug_1: false
+    light.snug_2: false
     light.snug_ceiling_strip_1:
-      state: "on"
+      state: 'on'
       brightness: 5
       xy_color:
-        - 0.701
-        - 0.299
+      - 0.701
+      - 0.299
     light.snug_ceiling_strip_2:
-      state: "on"
+      state: 'on'
       brightness: 5
       xy_color:
-        - 0.701
-        - 0.299
-    light.snug_lava_lamp: off
-    light.gaming_shelf_light_3: off
-    light.snug_records_shelf: off
-    light.movie_shelf_light: off
+      - 0.701
+      - 0.299
+    light.snug_lava_lamp: false
+    light.gaming_shelf_light_3: false
+    light.snug_records_shelf: false
+    light.movie_shelf_light: false
 - name: Snug Music
   id: ab4a46a4-d4cc-453d-b0e1-0c0b89f5b220
   entities:
-    light.steampunk_lamp: off
+    light.steampunk_lamp: false
     light.snug_1:
-      state: "on"
+      state: 'on'
       brightness: 1
       color_temp: 650
-    light.snug_2: off
+    light.snug_2: false
     light.snug_ceiling_strip_1:
-      state: "on"
+      state: 'on'
       brightness: 15
       xy_color:
-        - 0.138
-        - 0.07
+      - 0.138
+      - 0.07
     light.snug_ceiling_strip_2:
-      state: "on"
+      state: 'on'
       brightness: 15
       xy_color:
-        - 0.138
-        - 0.07
-    light.snug_lava_lamp: on
-    light.gaming_shelf_light_3: off
-    light.snug_records_shelf: off
-    light.movie_shelf_light: off
+      - 0.138
+      - 0.07
+    light.snug_lava_lamp: true
+    light.gaming_shelf_light_3: false
+    light.snug_records_shelf: false
+    light.movie_shelf_light: false
 - name: Snug LP12
   id: b7416c6c-1a8c-41db-bf05-02532d1ed36a
   entities:
     light.steampunk_lamp:
-      state: "on"
+      state: 'on'
       brightness: 1
       xy_color:
-        - 0.222
-        - 0.079
+      - 0.222
+      - 0.079
     light.snug_1:
-      state: "on"
+      state: 'on'
       brightness: 1
       color_temp: 650
     light.snug_2:
-      state: "on"
+      state: 'on'
       brightness: 1
       color_temp: 650
     light.snug_ceiling_strip_1:
-      state: "on"
+      state: 'on'
       brightness: 15
       xy_color:
-        - 0.138
-        - 0.07
+      - 0.138
+      - 0.07
     light.snug_ceiling_strip_2:
-      state: "on"
+      state: 'on'
       brightness: 15
       xy_color:
-        - 0.138
-        - 0.07
-    light.snug_lava_lamp: on
-    light.gaming_shelf_light_3: off
-    light.snug_records_shelf: on
-    light.movie_shelf_light: off
+      - 0.138
+      - 0.07
+    light.snug_lava_lamp: true
+    light.gaming_shelf_light_3: false
+    light.snug_records_shelf: true
+    light.movie_shelf_light: false
 - name: Snug Bright
   id: dacd3574-cc6c-4db0-ab05-9d08b16bc586
   entities:
-    light.steampunk_lamp: off
-    light.snug_lava_lamp: off
+    light.steampunk_lamp: false
+    light.snug_lava_lamp: false
     light.snug_ceiling_strip_1:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.snug_ceiling_strip_2:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.snug_1:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 140
     light.snug_2:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 140
     light.gaming_shelf_light_3:
-      state: "on"
+      state: 'on'
       color_temp: 140
       brightness: 255
     light.snug_records_shelf:
-      state: "on"
+      state: 'on'
     light.movie_shelf_light:
-      state: "on"
+      state: 'on'
       brightness: 255
 - name: Snug Chill
   id: 240e9405-fc16-449e-b55e-128c8b23e54b
   entities:
     light.steampunk_lamp:
-      state: "on"
+      state: 'on'
       brightness: 13
-      xy_color: [ 0.3824, 0.1596 ]
+      xy_color:
+      - 0.3824
+      - 0.1596
     light.snug_ceiling_strip_1:
-      state: "on"
+      state: 'on'
       brightness: 82
       xy_color:
       - 0.675
       - 0.32
     light.snug_ceiling_strip_2:
-      state: "on"
+      state: 'on'
       brightness: 82
       xy_color:
       - 0.675
       - 0.32
     light.snug_1:
-      state: "on"
+      state: 'on'
       brightness: 1
       color_temp: 650
     light.snug_2:
-      state: "on"
+      state: 'on'
       brightness: 1
       color_temp: 650
-    light.snug_lava_lamp: on
+    light.snug_lava_lamp: true
     light.gaming_shelf_light_3:
-      state: "on"
+      state: 'on'
       brightness: 112
-      xy_color: [ 0.137, 0.065 ]
+      xy_color:
+      - 0.137
+      - 0.065
     light.snug_records_shelf:
-      state: "on"
+      state: 'on'
     light.movie_shelf_light:
-      state: "on"
+      state: 'on'
       brightness: 70
 - name: Snug Gaming
   id: 6b4e8913-24e5-422b-8165-7cb611b775e6
   entities:
     light.steampunk_lamp:
-      state: "on"
+      state: 'on'
       brightness: 1
-      xy_color: [ 0.137, 0.065 ]
+      xy_color:
+      - 0.137
+      - 0.065
     light.snug_ceiling_strip_1:
-      state: "on"
+      state: 'on'
       brightness: 50
-      xy_color: [ 0.137, 0.065 ]
+      xy_color:
+      - 0.137
+      - 0.065
     light.snug_ceiling_strip_2:
-      state: "on"
+      state: 'on'
       brightness: 59
-      xy_color: [ 0.137, 0.065 ]
+      xy_color:
+      - 0.137
+      - 0.065
     light.snug_1:
-      state: "off"
+      state: 'off'
     light.snug_2:
-      state: "off"
-    light.snug_lava_lamp: on
+      state: 'off'
+    light.snug_lava_lamp: true
     light.gaming_shelf_light_3:
-      state: "on"
+      state: 'on'
       brightness: 112
-      xy_color: [ 0.137, 0.065 ]
+      xy_color:
+      - 0.137
+      - 0.065
     light.snug_records_shelf:
-      state: "off"
+      state: 'off'
     light.movie_shelf_light:
-      state: "off"
-- name: Snug Work
-  id: 497a1c67-add7-43e1-8b4d-a821c52e92fc
+      state: 'off'
+- id: 497a1c67-add7-43e1-8b4d-a821c52e92fc
+  name: Snug Work
   entities:
-    light.steampunk_lamp: off
+    light.steampunk_lamp:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Steampunk Lamp
+      supported_features: 40
+      state: 'off'
     light.snug_ceiling_strip_1:
-      state: "on"
-      brightness: 50
-      xy_color: [ 0.137, 0.065 ]
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness: 254
+      friendly_name: Snug Ceiling Strip 1 Light
+      supported_features: 40
+      state: 'off'
     light.snug_ceiling_strip_2:
-      state: "on"
-      brightness: 59
-      xy_color: [ 0.137, 0.065 ]
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 2 Light
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 51
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      color_temp: 153
+      state: 'on'
     light.snug_1:
-      state: "on"
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - color_temp
+      mode: normal
+      dynamics: none
+      friendly_name: Snug 1
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 102
+      color_temp: 275
+      hs_color:
+      - 27.048
+      - 41.896
+      rgb_color:
+      - 255
+      - 196
+      - 148
+      xy_color:
+      - 0.444
+      - 0.371
+      effect: None
+      state: 'on'
     light.snug_2:
-      state: "on"
-    light.snug_lava_lamp: off
-    light.gaming_shelf_light_3: off
-    light.snug_records_shelf: off
-    light.movie_shelf_light: off
-
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - color_temp
+      mode: normal
+      dynamics: none
+      friendly_name: Snug 2
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 102
+      color_temp: 275
+      hs_color:
+      - 27.048
+      - 41.896
+      rgb_color:
+      - 255
+      - 196
+      - 148
+      xy_color:
+      - 0.444
+      - 0.371
+      effect: None
+      state: 'on'
+    light.snug_lava_lamp:
+      supported_color_modes:
+      - onoff
+      friendly_name: Snug Lava Lamp
+      supported_features: 0
+      state: 'off'
+    light.gaming_shelf_light_3:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness: 254
+      friendly_name: Gaming Shelf Light
+      supported_features: 40
+      state: 'off'
+    light.snug_records_shelf:
+      supported_color_modes:
+      - onoff
+      friendly_name: Snug Records Shelf
+      supported_features: 0
+      state: 'off'
+    light.movie_shelf_light:
+      supported_color_modes:
+      - brightness
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Movie Shelf Light
+      supported_features: 40
+      state: 'off'
+  metadata: {}
 - name: Hallway Bright
   id: 7552d79a-9ae1-4865-8be9-b0bd90213dbf
   entities:
     light.downstairs_hallway_1:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.downstairs_hallway_2:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.downstairs_hallway_3:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.downstairs_hallway_4:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.downstairs_hallway_5:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.downstairs_hallway_6:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.stair_1:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.stair_2:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.stair_3:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.stair_spot:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.upstairs_spot_1:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.upstairs_spot_2:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
     light.upstairs_spot_3:
-      state: "on"
+      state: 'on'
       brightness: 255
       color_temp: 153
-
 - name: Stairs Off
   id: 85006029-0c84-4efd-892f-6cc68309f6dd
   entities:
     light.stair_1:
-      state: "off"
+      state: 'off'
     light.stair_2:
-      state: "off"
+      state: 'off'
     light.stair_3:
-      state: "off"
+      state: 'off'
     light.stair_spot:
-      state: "off"
+      state: 'off'
 - name: Stairs Morning
   id: db047cdd-3fbd-48da-86b0-33f0f08a6de7
   entities:
     light.stair_1:
-      state: "on"
+      state: 'on'
       brightness: 10
       color_temp: 158
     light.stair_2:
-      state: "on"
+      state: 'on'
       brightness: 10
       color_temp: 367
     light.stair_3:
-      state: "on"
+      state: 'on'
       brightness: 10
       color_temp: 244
     light.stair_spot:
-      state: "on"
+      state: 'on'
       brightness: 29
       color_temp: 379
 - name: Stairs Late Evening
   id: 47157d84-5f4f-40b9-90b6-8a09d7fb7c06
   entities:
     light.stair_1:
-      state: "on"
+      state: 'on'
       brightness: 105
       xy_color:
-        - 0.181
-        - 0.429
+      - 0.181
+      - 0.429
     light.stair_2:
-      state: "on"
+      state: 'on'
       brightness: 105
       xy_color:
-        - 0.427
-        - 0.222
+      - 0.427
+      - 0.222
     light.stair_3:
-      state: "on"
+      state: 'on'
       brightness: 105
       xy_color:
-        - 0.183
-        - 0.106
+      - 0.183
+      - 0.106
     light.stair_spot:
-      state: "on"
+      state: 'on'
       brightness: 116
       color_temp: 156
 - name: Stairs Dull Outside
   id: 10dfd71e-63bb-4aa8-9cb9-e948d355f332
   entities:
     light.stair_1:
-      state: "on"
+      state: 'on'
       brightness: 1
       xy_color:
-        - 0.181
-        - 0.429
+      - 0.181
+      - 0.429
     light.stair_2:
-      state: "on"
+      state: 'on'
       brightness: 1
       xy_color:
-        - 0.427
-        - 0.222
+      - 0.427
+      - 0.222
     light.stair_3:
-      state: "on"
+      state: 'on'
       brightness: 1
       xy_color:
-        - 0.183
-        - 0.106
+      - 0.183
+      - 0.106
     light.stair_spot:
-      state: "on"
+      state: 'on'
       brightness: 1
       color_temp: 428
 - name: Stairs Late Night
   id: 733760bc-2911-4d12-abb1-a22f095135e3
   entities:
     light.stair_1:
-      state: "on"
+      state: 'on'
       brightness: 1
       xy_color:
-        - 0.216
-        - 0.113
+      - 0.216
+      - 0.113
     light.stair_2:
-      state: "on"
+      state: 'on'
       brightness: 1
       xy_color:
-        - 0.162
-        - 0.271
+      - 0.162
+      - 0.271
     light.stair_3:
-      state: "on"
+      state: 'on'
       brightness: 1
       xy_color:
-        - 0.158
-        - 0.087
+      - 0.158
+      - 0.087
     light.stair_spot:
-      state: "on"
+      state: 'on'
       brightness: 1
       color_temp: 428
 - name: Stairs Night
   id: c813716c-26e6-43b6-86dc-49266818d2c5
   entities:
     light.stair_1:
-      state: "off"
+      state: 'off'
     light.stair_2:
-      state: "on"
+      state: 'on'
       brightness: 1
       xy_color:
-        - 0.678
-        - 0.31
-    light.stair_3: off
-    light.stair_spot: off
+      - 0.678
+      - 0.31
+    light.stair_3: false
+    light.stair_spot: false
 - name: Stairs Evening
   id: d07df3c5-ba9e-42cd-b6f4-0ec318978de6
   entities:
     light.stair_1:
-      state: "on"
+      state: 'on'
       brightness: 30
       xy_color:
-        - 0.31
-        - 0.29
+      - 0.31
+      - 0.29
     light.stair_2:
-      state: "on"
+      state: 'on'
       brightness: 30
       xy_color:
-        - 0.22
-        - 0.274
+      - 0.22
+      - 0.274
     light.stair_3:
-      state: "on"
+      state: 'on'
       brightness: 30
       xy_color:
-        - 0.259
-        - 0.177
+      - 0.259
+      - 0.177
     light.stair_spot:
-      state: "on"
+      state: 'on'
       brightness: 1
       color_temp: 156
-
 - name: Upstairs Hallway Morning
   id: 37886fb5-d590-4dab-b009-7a437ef3e656
   entities:
     light.upstairs_spot_1:
-      state: "on"
+      state: 'on'
       brightness: 50
       color_temp: 379
     light.upstairs_spot_2:
-      state: "on"
+      state: 'on'
       brightness: 50
       color_temp: 379
     light.upstairs_spot_3:
-      state: "on"
+      state: 'on'
       brightness: 50
       color_temp: 379
 - name: Upstairs Hallway Daytime
   id: d2ce0313-f9bd-4c7e-bada-2ad2a8039bd6
   entities:
     light.upstairs_spot_1:
-      state: "on"
+      state: 'on'
       brightness: 63
       color_temp: 309
     light.upstairs_spot_2:
-      state: "on"
+      state: 'on'
       brightness: 76
       color_temp: 239
     light.upstairs_spot_3:
-      state: "on"
+      state: 'on'
       brightness: 109
       color_temp: 156
 - name: Upstairs Hallway Evening
   id: 9565e426-66eb-4d08-bebb-dba3de3ca7af
   entities:
     light.upstairs_spot_1:
-      state: "on"
+      state: 'on'
       brightness: 97
       color_temp: 312
     light.upstairs_spot_2:
-      state: "on"
+      state: 'on'
       brightness: 73
       color_temp: 398
     light.upstairs_spot_3:
-      state: "on"
+      state: 'on'
       brightness: 55
       color_temp: 454
 - name: Upstairs Hallway Night
   id: 3ed3ce8e-9719-41b2-af81-8fb7d042dfbc
   entities:
     light.upstairs_spot_1:
-      state: "on"
+      state: 'on'
       brightness: 21
       color_temp: 454
     light.upstairs_spot_2:
-      state: "off"
+      state: 'off'
     light.upstairs_spot_3:
-      state: "on"
+      state: 'on'
       brightness: 17
       color_temp: 454
 - name: Upstairs Hallway Off
   id: 1bf46562-34d6-4a92-b7c2-34c99dfaf0ff
   entities:
     light.upstairs_spot_1:
-      state: "off"
+      state: 'off'
     light.upstairs_spot_2:
-      state: "off"
+      state: 'off'
     light.upstairs_spot_3:
-      state: "off"
-
+      state: 'off'
 - name: Bedroom Off
   id: da836f1d-b36d-4d2f-a52b-c754373cd35a
   entities:
     light.bedroom_main:
-      state: "off"
+      state: 'off'
     light.hue_color_lamp_1:
-      state: "off"
+      state: 'off'
     light.hue_white_lamp_1:
-      state: "off"
-
+      state: 'off'
 - name: Bedroom Mood
   id: 6c8024e2-443f-4bd3-a32a-044cd0bcdb13
   entities:
     light.bedroom_main:
-      state: "off"
+      state: 'off'
     light.hue_color_lamp_1:
-      state: "on"
+      state: 'on'
       brightness: 100
-      xy_color: [0.586, 0.387]
+      xy_color:
+      - 0.586
+      - 0.387
     light.hue_white_lamp_1:
-      state: "on"
+      state: 'on'
       brightness: 100
-
 - name: Bedroom Party
   id: d6ad3da0-6dcf-4df6-a166-2587e4d6b338
   entities:
     light.bedroom_main:
-      state: "off"
+      state: 'off'
     light.hue_color_lamp_1:
-      state: "on"
+      state: 'on'
       brightness: 146
-      xy_color: [0.292, 0.116]
+      xy_color:
+      - 0.292
+      - 0.116
     light.hue_white_lamp_1:
-      state: "on"
+      state: 'on'
       brightness: 146
-
 - name: Bedroom Bright
   id: 158e2c84-cf6c-4188-bf1a-77e74ef6ab4c
   entities:
     light.bedroom_main:
-      state: "on"
+      state: 'on'
     light.hue_color_lamp_1:
-      state: "on"
+      state: 'on'
       color_temp: 153
       brightness: 255
     light.hue_white_lamp_1:
-      state: "on"
+      state: 'on'
       brightness: 255

@@ -92,7 +92,7 @@ light:
       - light.kitchen_main
       - light.kitchen_under_cupboards
       - light.kitchen_under_tall_cupboards
-      - light.back_garden_light
+      - light.dining_table_light
   - platform: group
     name: Snug Lights
     entities:

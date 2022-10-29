@@ -30,9 +30,12 @@ automation:
     - condition: numeric_state
       entity_id: climate.spa_thermostat
       below: 27
+      attribute: current_temperature
     - condition: time
       weekday:
         - fri
+        - sat
+        - sun
   action:
     service: climate.set_temperature
     target:
@@ -50,9 +53,12 @@ automation:
     - condition: numeric_state
       entity_id: climate.spa_thermostat
       below: 29
+      attribute: current_temperature
     - condition: time
       weekday:
         - fri
+        - sat
+        - sun
   action:
     service: climate.set_temperature
     target:
@@ -70,9 +76,12 @@ automation:
     - condition: numeric_state
       entity_id: climate.spa_thermostat
       below: 31
+      attribute: current_temperature
     - condition: time
       weekday:
         - fri
+        - sat
+        - sun
   action:
     service: climate.set_temperature
     target:
@@ -90,9 +99,12 @@ automation:
     - condition: numeric_state
       entity_id: climate.spa_thermostat
       below: 33
+      attribute: current_temperature
     - condition: time
       weekday:
         - fri
+        - sat
+        - sun
   action:
     service: climate.set_temperature
     target:
@@ -110,9 +122,12 @@ automation:
     - condition: numeric_state
       entity_id: climate.spa_thermostat
       below: 35
+      attribute: current_temperature
     - condition: time
       weekday:
         - fri
+        - sat
+        - sun
   action:
     service: climate.set_temperature
     target:
@@ -130,9 +145,12 @@ automation:
     - condition: numeric_state
       entity_id: climate.spa_thermostat
       below: 37
+      attribute: current_temperature
     - condition: time
       weekday:
         - fri
+        - sat
+        - sun
   action:
     service: climate.set_temperature
     target:
