@@ -87,6 +87,9 @@ input_select:
 switch:
   - platform: benq_projector
     filename: /dev/ttyUSB0
+  - platform: flux
+    lights:
+      - light.snug_ceiling_strip_2
 
 light:
   - platform: group
