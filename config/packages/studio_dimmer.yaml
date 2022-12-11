@@ -1,0 +1,51 @@
+automation:
+- alias: Studio Lights - Dimmer
+  description: ""
+  use_blueprint:
+    path: EPMatt/philips_324131092621.yaml
+    input:
+      integration: ZHA
+      controller_device: 4a652298459ae77809d299ac9e2a2f9d
+      helper_last_controller_event: input_text.studio_dimmer_last_command
+      action_button_on_short:
+        - service: input_select.select_next
+          target:
+            entity_id: input_select.studio_scene
+        - service: scene.turn_on
+          data_template:
+            transition: 0.1
+            entity_id: scene.{{ states('input_select.studio_scene') }}
+      action_button_off_short:
+        - service: input_select.select_first
+          target:
+            entity_id: input_select.studio_scene
+        - service: light.turn_off
+          data: {}
+          target:
+            area_id: studio
+      action_button_up_short:
+        - service: light.turn_on
+          target:
+            area_id: studio
+          data:
+            brightness_step: 50
+      action_button_down_short:
+        - service: light.turn_on
+          target:
+            area_id: studio
+          data:
+            brightness_step: -50
+      action_button_up_long:
+        - service: light.turn_on
+          target:
+            area_id: studio
+          data:
+            brightness_step: 25
+      action_button_down_long:
+        - service: light.turn_on
+          target:
+            area_id: studio
+          data:
+            brightness_step: -25
+      button_up_long_loop: true
+      button_down_long_loop: true
