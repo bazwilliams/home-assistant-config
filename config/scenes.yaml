@@ -1005,40 +1005,10 @@
       supported_color_modes:
       - color_temp
       - xy
-      mode: normal
-      dynamics: none
       friendly_name: Steampunk Lamp
       supported_features: 40
-      state: 'off'
-    light.snug_1:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
       mode: normal
       dynamics: none
-      friendly_name: Snug 1
-      supported_features: 44
-      state: 'off'
-    light.snug_2:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 2
-      supported_features: 44
       state: 'off'
     light.snug_ceiling_strip_1:
       min_color_temp_kelvin: 2000
@@ -1049,7 +1019,7 @@
       - color_temp
       - xy
       off_with_transition: false
-      off_brightness: 15
+      off_brightness: 61
       friendly_name: Snug Ceiling Strip 1 Light
       supported_features: 40
       state: 'off'
@@ -1062,7 +1032,7 @@
       - color_temp
       - xy
       off_with_transition: false
-      off_brightness: 162
+      off_brightness: 150
       friendly_name: Snug Ceiling Strip 2 Light
       supported_features: 40
       state: 'off'
@@ -1081,7 +1051,7 @@
       - color_temp
       - xy
       off_with_transition: false
-      off_brightness: 112
+      off_brightness: 61
       friendly_name: Gaming Shelf Light
       supported_features: 40
       state: 'off'
@@ -1095,12 +1065,38 @@
       supported_color_modes:
       - brightness
       off_with_transition: false
-      off_brightness: 1
+      off_brightness: 5
       friendly_name: Movie Shelf Light
       supported_features: 40
       state: 'off'
     switch.flux:
       friendly_name: Flux
+      state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      state: 'off'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
       state: 'off'
   metadata:
     switch.flux:
@@ -1116,40 +1112,10 @@
       supported_color_modes:
       - color_temp
       - xy
-      mode: normal
-      dynamics: none
       friendly_name: Steampunk Lamp
       supported_features: 40
-      state: 'off'
-    light.snug_1:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
       mode: normal
       dynamics: none
-      friendly_name: Snug 1
-      supported_features: 44
-      state: 'off'
-    light.snug_2:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 2
-      supported_features: 44
       state: 'off'
     light.snug_ceiling_strip_1:
       min_color_temp_kelvin: 2000
@@ -1200,335 +1166,6 @@
       xy_color:
       - 0.701
       - 0.299
-      state: 'on'
-    light.snug_lava_lamp:
-      supported_color_modes:
-      - onoff
-      friendly_name: Snug Lava Lamp
-      supported_features: 0
-      state: 'off'
-    light.gaming_shelf_light_3:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      off_with_transition: false
-      off_brightness: 112
-      friendly_name: Gaming Shelf Light
-      supported_features: 40
-      state: 'off'
-    light.snug_records_shelf:
-      supported_color_modes:
-      - onoff
-      friendly_name: Snug Records Shelf
-      supported_features: 0
-      state: 'off'
-    light.movie_shelf_light:
-      supported_color_modes:
-      - brightness
-      off_with_transition: false
-      off_brightness: 1
-      friendly_name: Movie Shelf Light
-      supported_features: 40
-      state: 'off'
-    switch.flux:
-      friendly_name: Flux
-      state: 'off'
-  metadata:
-    switch.flux:
-      entity_only: true
-- id: ab4a46a4-d4cc-453d-b0e1-0c0b89f5b220
-  name: Snug Music
-  entities:
-    light.steampunk_lamp:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      mode: normal
-      dynamics: none
-      friendly_name: Steampunk Lamp
-      supported_features: 40
-      state: 'off'
-    light.snug_1:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 1
-      supported_features: 44
-      color_mode: color_temp
-      brightness: 1
-      color_temp_kelvin: 2202
-      color_temp: 454
-      hs_color:
-      - 29.79
-      - 84.553
-      rgb_color:
-      - 255
-      - 146
-      - 39
-      xy_color:
-      - 0.579
-      - 0.388
-      effect: None
-      state: 'on'
-    light.snug_2:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 2
-      supported_features: 44
-      state: 'off'
-    light.snug_ceiling_strip_1:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Snug Ceiling Strip 1 Light
-      supported_features: 40
-      color_mode: xy
-      brightness: 15
-      hs_color:
-      - 225.25
-      - 94.118
-      rgb_color:
-      - 15
-      - 74
-      - 255
-      xy_color:
-      - 0.138
-      - 0.07
-      state: 'on'
-    light.snug_ceiling_strip_2:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Snug Ceiling Strip 2 Light
-      supported_features: 40
-      color_mode: xy
-      brightness: 162
-      hs_color:
-      - 27.273
-      - 47.451
-      rgb_color:
-      - 255
-      - 189
-      - 134
-      xy_color:
-      - 0.464
-      - 0.377
-      state: 'on'
-    light.snug_lava_lamp:
-      supported_color_modes:
-      - onoff
-      friendly_name: Snug Lava Lamp
-      supported_features: 0
-      color_mode: onoff
-      state: 'on'
-    light.gaming_shelf_light_3:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      off_with_transition: false
-      off_brightness: 112
-      friendly_name: Gaming Shelf Light
-      supported_features: 40
-      state: 'off'
-    light.snug_records_shelf:
-      supported_color_modes:
-      - onoff
-      friendly_name: Snug Records Shelf
-      supported_features: 0
-      color_mode: onoff
-      state: 'on'
-    light.movie_shelf_light:
-      supported_color_modes:
-      - brightness
-      off_with_transition: false
-      off_brightness: 70
-      friendly_name: Movie Shelf Light
-      supported_features: 40
-      state: 'off'
-    switch.flux:
-      friendly_name: Flux
-      state: 'off'
-  metadata:
-    switch.flux:
-      entity_only: true
-- id: b7416c6c-1a8c-41db-bf05-02532d1ed36a
-  name: Snug LP12
-  entities:
-    light.steampunk_lamp:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      mode: normal
-      dynamics: none
-      friendly_name: Steampunk Lamp
-      supported_features: 40
-      color_mode: xy
-      brightness: 1
-      hs_color:
-      - 271.765
-      - 100
-      rgb_color:
-      - 135
-      - 0
-      - 255
-      xy_color:
-      - 0.222
-      - 0.079
-      state: 'on'
-    light.snug_1:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 1
-      supported_features: 44
-      color_mode: color_temp
-      brightness: 1
-      color_temp_kelvin: 2202
-      color_temp: 454
-      hs_color:
-      - 29.79
-      - 84.553
-      rgb_color:
-      - 255
-      - 146
-      - 39
-      xy_color:
-      - 0.579
-      - 0.388
-      effect: None
-      state: 'on'
-    light.snug_2:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 2
-      supported_features: 44
-      color_mode: color_temp
-      brightness: 1
-      color_temp_kelvin: 2202
-      color_temp: 454
-      hs_color:
-      - 29.79
-      - 84.553
-      rgb_color:
-      - 255
-      - 146
-      - 39
-      xy_color:
-      - 0.579
-      - 0.388
-      effect: None
-      state: 'on'
-    light.snug_ceiling_strip_1:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Snug Ceiling Strip 1 Light
-      supported_features: 40
-      color_mode: xy
-      brightness: 15
-      hs_color:
-      - 225.25
-      - 94.118
-      rgb_color:
-      - 15
-      - 74
-      - 255
-      xy_color:
-      - 0.138
-      - 0.07
-      state: 'on'
-    light.snug_ceiling_strip_2:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Snug Ceiling Strip 2 Light
-      supported_features: 40
-      color_mode: xy
-      brightness: 15
-      hs_color:
-      - 225.25
-      - 94.118
-      rgb_color:
-      - 15
-      - 74
-      - 255
-      xy_color:
-      - 0.138
-      - 0.07
       state: 'on'
     light.snug_lava_lamp:
       supported_color_modes:
@@ -1554,21 +1191,406 @@
       - onoff
       friendly_name: Snug Records Shelf
       supported_features: 0
+      state: 'off'
+    light.movie_shelf_light:
+      supported_color_modes:
+      - brightness
+      off_with_transition: false
+      off_brightness: 5
+      friendly_name: Movie Shelf Light
+      supported_features: 40
+      state: 'off'
+    switch.flux:
+      friendly_name: Flux
+      state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      color_mode: xy
+      brightness: 5
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      state: 'on'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
+      color_mode: xy
+      brightness: 5
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      state: 'on'
+  metadata:
+    switch.flux:
+      entity_only: true
+- id: ab4a46a4-d4cc-453d-b0e1-0c0b89f5b220
+  name: Snug Music
+  entities:
+    light.steampunk_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Steampunk Lamp
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      color_mode: xy
+      brightness: 61
+      hs_color:
+      - 15.178
+      - 99.216
+      rgb_color:
+      - 255
+      - 66
+      - 2
+      xy_color:
+      - 0.677
+      - 0.319
+      state: 'on'
+    light.snug_ceiling_strip_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 1 Light
+      supported_features: 40
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 270.824
+      - 100
+      rgb_color:
+      - 131
+      - 0
+      - 255
+      xy_color:
+      - 0.217
+      - 0.077
+      state: 'on'
+    light.snug_ceiling_strip_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 2 Light
+      supported_features: 40
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 270.824
+      - 100
+      rgb_color:
+      - 131
+      - 0
+      - 255
+      xy_color:
+      - 0.217
+      - 0.077
+      state: 'on'
+    light.snug_lava_lamp:
+      supported_color_modes:
+      - onoff
+      friendly_name: Snug Lava Lamp
+      supported_features: 0
+      color_mode: onoff
+      state: 'on'
+    light.gaming_shelf_light_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness: 61
+      friendly_name: Gaming Shelf Light
+      supported_features: 40
+      state: 'off'
+    light.snug_records_shelf:
+      supported_color_modes:
+      - onoff
+      friendly_name: Snug Records Shelf
+      supported_features: 0
+      state: 'off'
+    light.movie_shelf_light:
+      supported_color_modes:
+      - brightness
+      off_with_transition: false
+      off_brightness: 5
+      friendly_name: Movie Shelf Light
+      supported_features: 40
+      state: 'off'
+    switch.flux:
+      friendly_name: Flux
+      state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 195.178
+      - 99.216
+      rgb_color:
+      - 2
+      - 191
+      - 255
+      xy_color:
+      - 0.146
+      - 0.238
+      state: 'on'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
+      color_mode: xy
+      brightness: 94
+      hs_color:
+      - 270.824
+      - 100
+      rgb_color:
+      - 131
+      - 0
+      - 255
+      xy_color:
+      - 0.217
+      - 0.077
+      state: 'on'
+  metadata:
+    switch.flux:
+      entity_only: true
+- id: b7416c6c-1a8c-41db-bf05-02532d1ed36a
+  name: Snug LP12
+  entities:
+    light.steampunk_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Steampunk Lamp
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      color_mode: xy
+      brightness: 1
+      hs_color:
+      - 271.765
+      - 100
+      rgb_color:
+      - 135
+      - 0
+      - 255
+      xy_color:
+      - 0.222
+      - 0.079
+      state: 'on'
+    light.snug_ceiling_strip_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 1 Light
+      supported_features: 40
+      color_mode: xy
+      brightness: 20
+      hs_color:
+      - 225.25
+      - 94.118
+      rgb_color:
+      - 15
+      - 74
+      - 255
+      xy_color:
+      - 0.138
+      - 0.07
+      state: 'on'
+    light.snug_ceiling_strip_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 2 Light
+      supported_features: 40
+      color_mode: xy
+      brightness: 20
+      hs_color:
+      - 224.64
+      - 98.039
+      rgb_color:
+      - 5
+      - 69
+      - 255
+      xy_color:
+      - 0.137
+      - 0.065
+      state: 'on'
+    light.snug_lava_lamp:
+      supported_color_modes:
+      - onoff
+      friendly_name: Snug Lava Lamp
+      supported_features: 0
+      state: 'off'
+    light.gaming_shelf_light_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: false
+      off_brightness: 61
+      friendly_name: Gaming Shelf Light
+      supported_features: 40
+      state: 'off'
+    light.snug_records_shelf:
+      supported_color_modes:
+      - onoff
+      friendly_name: Snug Records Shelf
+      supported_features: 0
       color_mode: onoff
       state: 'on'
     light.movie_shelf_light:
       supported_color_modes:
       - brightness
       off_with_transition: false
-      off_brightness:
+      off_brightness: 5
       friendly_name: Movie Shelf Light
       supported_features: 40
-      color_mode: brightness
-      brightness: 70
-      state: 'on'
+      state: 'off'
     switch.flux:
       friendly_name: Flux
       state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 82
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      color_temp_kelvin: 2000
+      color_temp: 500
+      state: 'on'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
+      color_mode: xy
+      brightness: 26
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      state: 'on'
   metadata:
     switch.flux:
       entity_only: true
@@ -1583,11 +1605,25 @@
       supported_color_modes:
       - color_temp
       - xy
-      mode: normal
-      dynamics: none
       friendly_name: Steampunk Lamp
       supported_features: 40
-      state: 'off'
+      mode: normal
+      dynamics: none
+      color_mode: color_temp
+      brightness: 255
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      color_temp_kelvin: 6535
+      color_temp: 153
+      state: 'on'
     light.snug_lava_lamp:
       supported_color_modes:
       - onoff
@@ -1602,10 +1638,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Snug Ceiling Strip 1 Light
-      supported_features: 40
       color_mode: color_temp
       brightness: 254
       hs_color:
@@ -1618,6 +1650,10 @@
       xy_color:
       - 0.326
       - 0.333
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 1 Light
+      supported_features: 40
       color_temp_kelvin: 6535
       color_temp: 153
       state: 'on'
@@ -1629,10 +1665,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Snug Ceiling Strip 2 Light
-      supported_features: 40
       color_mode: color_temp
       brightness: 254
       hs_color:
@@ -1645,68 +1677,12 @@
       xy_color:
       - 0.326
       - 0.333
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 2 Light
+      supported_features: 40
       color_temp_kelvin: 6535
       color_temp: 153
-      state: 'on'
-    light.snug_1:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 1
-      supported_features: 44
-      color_mode: color_temp
-      brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
-      hs_color:
-      - 54.768
-      - 1.6
-      rgb_color:
-      - 255
-      - 254
-      - 250
-      xy_color:
-      - 0.326
-      - 0.333
-      effect: None
-      state: 'on'
-    light.snug_2:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 2
-      supported_features: 44
-      color_mode: color_temp
-      brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
-      hs_color:
-      - 54.768
-      - 1.6
-      rgb_color:
-      - 255
-      - 254
-      - 250
-      xy_color:
-      - 0.326
-      - 0.333
-      effect: None
       state: 'on'
     light.gaming_shelf_light_3:
       min_color_temp_kelvin: 2000
@@ -1746,13 +1722,69 @@
       supported_color_modes:
       - brightness
       off_with_transition: false
-      off_brightness: 1
+      off_brightness:
       friendly_name: Movie Shelf Light
       supported_features: 40
-      state: 'off'
+      color_mode: brightness
+      brightness: 254
+      state: 'on'
     switch.flux:
       friendly_name: Flux
       state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      color_temp_kelvin: 6535
+      color_temp: 153
+      state: 'on'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
+      color_temp_kelvin: 6535
+      color_temp: 153
+      state: 'on'
   metadata:
     switch.flux:
       entity_only: true
@@ -1767,10 +1799,10 @@
       supported_color_modes:
       - color_temp
       - xy
-      mode: normal
-      dynamics: none
       friendly_name: Steampunk Lamp
       supported_features: 40
+      mode: normal
+      dynamics: none
       color_mode: xy
       brightness: 13
       hs_color:
@@ -1792,22 +1824,22 @@
       supported_color_modes:
       - color_temp
       - xy
+      color_mode: xy
+      brightness: 76
+      hs_color:
+      - 179.765
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 254
+      xy_color:
+      - 0.151
+      - 0.343
       off_with_transition: false
       off_brightness:
       friendly_name: Snug Ceiling Strip 1 Light
       supported_features: 40
-      color_mode: xy
-      brightness: 82
-      hs_color:
-      - 14.758
-      - 97.255
-      rgb_color:
-      - 255
-      - 68
-      - 7
-      xy_color:
-      - 0.675
-      - 0.32
       state: 'on'
     light.snug_ceiling_strip_2:
       min_color_temp_kelvin: 2000
@@ -1817,89 +1849,30 @@
       supported_color_modes:
       - color_temp
       - xy
+      color_mode: xy
+      brightness: 76
+      hs_color:
+      - 179.765
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 254
+      xy_color:
+      - 0.150988
+      - 0.342992
       off_with_transition: false
       off_brightness:
       friendly_name: Snug Ceiling Strip 2 Light
       supported_features: 40
-      color_mode: xy
-      brightness: 162
-      hs_color:
-      - 26.777
-      - 47.451
-      rgb_color:
-      - 255
-      - 188
-      - 134
-      xy_color:
-      - 0.464
-      - 0.376
-      state: 'on'
-    light.snug_1:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 1
-      supported_features: 44
-      color_mode: color_temp
-      brightness: 1
-      color_temp_kelvin: 2202
-      color_temp: 454
-      hs_color:
-      - 29.79
-      - 84.553
-      rgb_color:
-      - 255
-      - 146
-      - 39
-      xy_color:
-      - 0.579
-      - 0.388
-      effect: None
-      state: 'on'
-    light.snug_2:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 2
-      supported_features: 44
-      color_mode: color_temp
-      brightness: 1
-      color_temp_kelvin: 2202
-      color_temp: 454
-      hs_color:
-      - 29.79
-      - 84.553
-      rgb_color:
-      - 255
-      - 146
-      - 39
-      xy_color:
-      - 0.579
-      - 0.388
-      effect: None
       state: 'on'
     light.snug_lava_lamp:
       supported_color_modes:
       - onoff
       friendly_name: Snug Lava Lamp
       supported_features: 0
-      state: 'off'
+      color_mode: onoff
+      state: 'on'
     light.gaming_shelf_light_3:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -1913,25 +1886,24 @@
       friendly_name: Gaming Shelf Light
       supported_features: 40
       color_mode: xy
-      brightness: 112
+      brightness: 61
       hs_color:
-      - 224.64
-      - 98.039
+      - 314.824
+      - 100
       rgb_color:
-      - 5
-      - 69
       - 255
+      - 0
+      - 192
       xy_color:
-      - 0.137
-      - 0.065
+      - 0.477
+      - 0.196
       state: 'on'
     light.snug_records_shelf:
       supported_color_modes:
       - onoff
       friendly_name: Snug Records Shelf
       supported_features: 0
-      color_mode: onoff
-      state: 'on'
+      state: 'off'
     light.movie_shelf_light:
       supported_color_modes:
       - brightness
@@ -1940,11 +1912,61 @@
       friendly_name: Movie Shelf Light
       supported_features: 40
       color_mode: brightness
-      brightness: 70
+      brightness: 5
       state: 'on'
     switch.flux:
       friendly_name: Flux
       state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 143
+      hs_color:
+      - 283.274
+      - 88.627
+      rgb_color:
+      - 192
+      - 29
+      - 255
+      xy_color:
+      - 0.2998
+      - 0.1185
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      state: 'on'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 143
+      hs_color:
+      - 283.274
+      - 88.627
+      rgb_color:
+      - 192
+      - 29
+      - 255
+      xy_color:
+      - 0.2998
+      - 0.1185
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
+      state: 'on'
   metadata:
     switch.flux:
       entity_only: true
@@ -1959,22 +1981,22 @@
       supported_color_modes:
       - color_temp
       - xy
-      mode: normal
-      dynamics: none
       friendly_name: Steampunk Lamp
       supported_features: 40
+      mode: normal
+      dynamics: none
       color_mode: xy
       brightness: 1
       hs_color:
-      - 224.64
-      - 98.039
+      - 260.706
+      - 100
       rgb_color:
-      - 5
-      - 69
+      - 88
+      - 0
       - 255
       xy_color:
-      - 0.137
-      - 0.065
+      - 0.1709
+      - 0.0478
       state: 'on'
     light.snug_ceiling_strip_1:
       min_color_temp_kelvin: 2000
@@ -1984,22 +2006,22 @@
       supported_color_modes:
       - color_temp
       - xy
+      color_mode: xy
+      brightness: 50
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
       off_with_transition: false
       off_brightness:
       friendly_name: Snug Ceiling Strip 1 Light
       supported_features: 40
-      color_mode: xy
-      brightness: 50
-      hs_color:
-      - 225.25
-      - 94.118
-      rgb_color:
-      - 15
-      - 74
-      - 255
-      xy_color:
-      - 0.137987
-      - 0.069993
       state: 'on'
     light.snug_ceiling_strip_2:
       min_color_temp_kelvin: 2000
@@ -2009,53 +2031,23 @@
       supported_color_modes:
       - color_temp
       - xy
+      color_mode: xy
+      brightness: 51
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
       off_with_transition: false
       off_brightness:
       friendly_name: Snug Ceiling Strip 2 Light
       supported_features: 40
-      color_mode: xy
-      brightness: 59
-      hs_color:
-      - 224.64
-      - 98.039
-      rgb_color:
-      - 5
-      - 69
-      - 255
-      xy_color:
-      - 0.137
-      - 0.065
       state: 'on'
-    light.snug_1:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 1
-      supported_features: 44
-      state: 'off'
-    light.snug_2:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 2
-      supported_features: 44
-      state: 'off'
     light.snug_lava_lamp:
       supported_color_modes:
       - onoff
@@ -2098,13 +2090,63 @@
       supported_color_modes:
       - brightness
       off_with_transition: false
-      off_brightness: 1
+      off_brightness: 254
       friendly_name: Movie Shelf Light
       supported_features: 40
       state: 'off'
     switch.flux:
       friendly_name: Flux
       state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      state: 'on'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
+      state: 'on'
   metadata:
     switch.flux:
       entity_only: true
@@ -2119,11 +2161,23 @@
       supported_color_modes:
       - color_temp
       - xy
-      mode: normal
-      dynamics: none
       friendly_name: Steampunk Lamp
       supported_features: 40
-      state: 'off'
+      mode: normal
+      dynamics: none
+      color_mode: xy
+      brightness: 31
+      hs_color:
+      - 68.444
+      - 52.941
+      rgb_color:
+      - 236
+      - 255
+      - 120
+      xy_color:
+      - 0.3885
+      - 0.4774
+      state: 'on'
     light.snug_ceiling_strip_1:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -2133,10 +2187,22 @@
       - color_temp
       - xy
       off_with_transition: false
-      off_brightness: 15
+      off_brightness:
       friendly_name: Snug Ceiling Strip 1 Light
       supported_features: 40
-      state: 'off'
+      color_mode: xy
+      brightness: 61
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      state: 'on'
     light.snug_ceiling_strip_2:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -2145,82 +2211,22 @@
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: xy
-      brightness: 162
-      hs_color:
-      - 27
-      - 47.059
-      rgb_color:
-      - 255
-      - 189
-      - 135
-      xy_color:
-      - 0.463
-      - 0.376
       off_with_transition: false
       off_brightness:
       friendly_name: Snug Ceiling Strip 2 Light
       supported_features: 40
-      state: 'on'
-    light.snug_1:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      color_mode: color_temp
-      brightness: 102
-      color_temp_kelvin: 3636
-      color_temp: 275
+      color_mode: xy
+      brightness: 150
       hs_color:
-      - 27.048
-      - 41.896
+      - 0
+      - 0.392
       rgb_color:
       - 255
-      - 196
-      - 148
+      - 254
+      - 254
       xy_color:
-      - 0.444
-      - 0.371
-      effect: None
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 1
-      supported_features: 44
-      state: 'on'
-    light.snug_2:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - color_temp
-      mode: normal
-      dynamics: none
-      friendly_name: Snug 2
-      supported_features: 44
-      color_mode: color_temp
-      brightness: 102
-      color_temp_kelvin: 3636
-      color_temp: 275
-      hs_color:
-      - 27.048
-      - 41.896
-      rgb_color:
-      - 255
-      - 196
-      - 148
-      xy_color:
-      - 0.444
-      - 0.371
-      effect: None
+      - 0.323
+      - 0.329
       state: 'on'
     light.snug_lava_lamp:
       supported_color_modes:
@@ -2237,7 +2243,7 @@
       - color_temp
       - xy
       off_with_transition: false
-      off_brightness: 112
+      off_brightness: 254
       friendly_name: Gaming Shelf Light
       supported_features: 40
       state: 'off'
@@ -2251,13 +2257,39 @@
       supported_color_modes:
       - brightness
       off_with_transition: false
-      off_brightness: 1
+      off_brightness: 5
       friendly_name: Movie Shelf Light
       supported_features: 40
       state: 'off'
     switch.flux:
       friendly_name: Flux
-      state: 'on'
+      state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      state: 'off'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
+      state: 'off'
   metadata:
     switch.flux:
       entity_only: true
@@ -2566,3 +2598,288 @@
     light.mushroom_light:
       state: 'on'
       brightness: 255
+- id: '1669488309520'
+  name: Snug Marcus
+  entities:
+    light.steampunk_lamp:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Steampunk Lamp
+      supported_features: 40
+      state: 'off'
+    light.snug_ceiling_strip_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      hs_color:
+      - 195.249
+      - 70.98
+      rgb_color:
+      - 74
+      - 209
+      - 255
+      xy_color:
+      - 0.166
+      - 0.269
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 1 Light
+      supported_features: 40
+      state: 'on'
+    light.snug_ceiling_strip_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      hs_color:
+      - 195.249
+      - 70.98
+      rgb_color:
+      - 74
+      - 209
+      - 255
+      xy_color:
+      - 0.166
+      - 0.269
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Snug Ceiling Strip 2 Light
+      supported_features: 40
+      state: 'on'
+    light.snug_lava_lamp:
+      supported_color_modes:
+      - onoff
+      friendly_name: Snug Lava Lamp
+      supported_features: 0
+      color_mode: onoff
+      state: 'on'
+    light.gaming_shelf_light_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      off_with_transition: true
+      off_brightness: 254
+      friendly_name: Gaming Shelf Light
+      supported_features: 40
+      state: 'off'
+    light.snug_records_shelf:
+      supported_color_modes:
+      - onoff
+      friendly_name: Snug Records Shelf
+      supported_features: 0
+      state: 'off'
+    light.movie_shelf_light:
+      supported_color_modes:
+      - brightness
+      off_with_transition: true
+      off_brightness: 254
+      friendly_name: Movie Shelf Light
+      supported_features: 40
+      state: 'off'
+    switch.flux:
+      friendly_name: Flux
+      state: 'off'
+    light.snug_ceiling_inner:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Inner
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 135.059
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 64
+      xy_color:
+      - 0.17
+      - 0.703
+      state: 'on'
+    light.snug_ceiling_outer:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Snug Ceiling Outer
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 120
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 0
+      xy_color:
+      - 0.172
+      - 0.747
+      state: 'on'
+  metadata:
+    switch.flux:
+      entity_only: true
+- id: '1669573129269'
+  name: Living Room Christmas
+  entities:
+    light.hue_color_candle_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 99
+      hs_color:
+      - 90.275
+      - 85.49
+      rgb_color:
+      - 145
+      - 255
+      - 37
+      xy_color:
+      - 0.291
+      - 0.633
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 3
+      supported_features: 40
+      state: 'on'
+    light.hue_color_candle_5:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 99
+      hs_color:
+      - 90
+      - 43.137
+      rgb_color:
+      - 200
+      - 255
+      - 145
+      xy_color:
+      - 0.328
+      - 0.475
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 5
+      supported_features: 40
+      state: 'on'
+    light.hue_color_candle_6:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 99
+      hs_color:
+      - 135.273
+      - 43.137
+      rgb_color:
+      - 145
+      - 255
+      - 173
+      xy_color:
+      - 0.247
+      - 0.462
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 6
+      supported_features: 40
+      state: 'on'
+    light.hue_color_candle_7:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 99
+      hs_color:
+      - 105.205
+      - 57.255
+      rgb_color:
+      - 145
+      - 255
+      - 109
+      xy_color:
+      - 0.273
+      - 0.562
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 7
+      supported_features: 40
+      state: 'on'
+    light.hue_color_candle_8:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 99
+      hs_color:
+      - 135.529
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 66
+      xy_color:
+      - 0.17
+      - 0.7
+      mode: normal
+      dynamics: none
+      friendly_name: Hue color candle 8
+      supported_features: 40
+      state: 'on'
+  metadata: {}

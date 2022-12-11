@@ -13,3 +13,4 @@ home-assistant_v2.db*
 home-assistant.log*
 secrets.yaml
 zigbee.db*
+config/.home-assistant_v2.db.kes43c

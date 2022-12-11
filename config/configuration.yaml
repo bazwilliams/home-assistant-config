@@ -1,10 +1,19 @@
 # Loads default set of integrations. Do not remove.
 default_config:
 
+recorder:
+  purge_keep_days: 60
+
 homeassistant:
   packages: !include_dir_named packages
+  customize:
+    sensor.gas_consumption_today:
+      device_class: gas
+      unit_of_measurement: kWh
+    sensor.gas_consumption_year:
+      device_class: gas
+      unit_of_measurement: kWh
 
-# Text to speech
 tts:
   - platform: google_translate
 
@@ -39,6 +48,8 @@ input_text:
     name: ZHA Last Command - Snug Music Shortcut
   projector_shortcut_last_command:
     name: ZHA Last Command - Projector Shortcut
+  studio_dimmer_last_command:
+    name: ZHA Last Command - Studio Dimmer
   back_garden_scene:
     name: Back Garden Scene
   downstairs_hallway_scene:
@@ -67,10 +78,13 @@ input_boolean:
     name: Hallway should be bright
   snug_bfl:
     name: Snug should be bright
+  somebody_home:
+    name: Somebody is Home
 
 input_select:
   snug_scene:
     options:
+      - snug_off
       - snug_chill
       - snug_work
       - snug_gaming
@@ -83,6 +97,11 @@ input_select:
       - bedroom_mood
       - bedroom_party
       - bedroom_bright
+  studio_scene:
+    options:
+      - studio_off
+      - studio_mood
+      - studio_bright
 
 switch:
   - platform: benq_projector

@@ -9,9 +9,6 @@ automation:
       entity_id: binary_sensor.hue_motion_sensor_1_motion
       state: "on"
     - condition: state
-      entity_id: light.kitchen_lights
-      state:  "off"
-    - condition: state
       entity_id: input_boolean.kitchen_bfl
       state:  "off"
   trigger:

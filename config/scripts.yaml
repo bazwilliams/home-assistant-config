@@ -98,16 +98,16 @@ snug_surround:
     target:
       entity_id: media_player.openhome_uuid_4c494e4e_0026_0f22_2963_01387403013f
   - service: media_player.turn_on
-    target:
-      entity_id: media_player.arcam_fmj_192_168_1_52_zone_1
     data: {}
+    target:
+      entity_id: media_player.arcam_fmj_192_168_4_65_zone_1
   - delay:
       milliseconds: 30
   - service: media_player.select_source
     data:
       source: BD
     target:
-      entity_id: media_player.arcam_fmj_192_168_1_52_zone_1
+      entity_id: media_player.arcam_fmj_192_168_4_65_zone_1
   - service: media_player.turn_on
     target:
       entity_id: media_player.snug
